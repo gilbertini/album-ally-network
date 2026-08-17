@@ -4,7 +4,7 @@
  * Swap this string for another album's Markdown checklist and the whole app
  * follows via parseChecklist() in src/lib/checklist/parse.ts.
  */
-export const WORLD_CUP_2026_CHECKLIST_MD = String.raw`
+export const WORLD_CUP_2026_CHECKLIST_MD = `
 # Panini FIFA World Cup 2026 — Complete Base Album Checklist
 
 **Total base stickers: 980**
