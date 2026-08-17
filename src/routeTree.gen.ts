@@ -11,8 +11,10 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as MatchesRouteImport } from './routes/matches'
 import { Route as AlbumIndexRouteImport } from './routes/album.index'
 import { Route as AlbumCountryRouteImport } from './routes/album.$country'
+import { Route as BuildTradeIdRouteImport } from './routes/build-trade.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,6 +24,11 @@ const IndexRoute = IndexRouteImport.update({
 const DashboardRoute = DashboardRouteImport.update({
   id: '/dashboard',
   path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MatchesRoute = MatchesRouteImport.update({
+  id: '/matches',
+  path: '/matches',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AlbumIndexRoute = AlbumIndexRouteImport.update({
@@ -34,38 +41,70 @@ const AlbumCountryRoute = AlbumCountryRouteImport.update({
   path: '/album/$country',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BuildTradeIdRoute = BuildTradeIdRouteImport.update({
+  id: '/build-trade/$id',
+  path: '/build-trade/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRoute
+  '/matches': typeof MatchesRoute
   '/album/$country': typeof AlbumCountryRoute
+  '/build-trade/$id': typeof BuildTradeIdRoute
   '/album/': typeof AlbumIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRoute
+  '/matches': typeof MatchesRoute
   '/album/$country': typeof AlbumCountryRoute
+  '/build-trade/$id': typeof BuildTradeIdRoute
   '/album': typeof AlbumIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRoute
+  '/matches': typeof MatchesRoute
   '/album/$country': typeof AlbumCountryRoute
+  '/build-trade/$id': typeof BuildTradeIdRoute
   '/album/': typeof AlbumIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/dashboard' | '/album/$country' | '/album/'
+  fullPaths:
+    | '/'
+    | '/dashboard'
+    | '/matches'
+    | '/album/$country'
+    | '/build-trade/$id'
+    | '/album/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/dashboard' | '/album/$country' | '/album'
-  id: '__root__' | '/' | '/dashboard' | '/album/$country' | '/album/'
+  to:
+    | '/'
+    | '/dashboard'
+    | '/matches'
+    | '/album/$country'
+    | '/build-trade/$id'
+    | '/album'
+  id:
+    | '__root__'
+    | '/'
+    | '/dashboard'
+    | '/matches'
+    | '/album/$country'
+    | '/build-trade/$id'
+    | '/album/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DashboardRoute: typeof DashboardRoute
+  MatchesRoute: typeof MatchesRoute
   AlbumCountryRoute: typeof AlbumCountryRoute
+  BuildTradeIdRoute: typeof BuildTradeIdRoute
   AlbumIndexRoute: typeof AlbumIndexRoute
 }
 
@@ -85,6 +124,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DashboardRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/matches': {
+      id: '/matches'
+      path: '/matches'
+      fullPath: '/matches'
+      preLoaderRoute: typeof MatchesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/album/': {
       id: '/album/'
       path: '/album'
@@ -99,13 +145,22 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AlbumCountryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/build-trade/$id': {
+      id: '/build-trade/$id'
+      path: '/build-trade/$id'
+      fullPath: '/build-trade/$id'
+      preLoaderRoute: typeof BuildTradeIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DashboardRoute: DashboardRoute,
+  MatchesRoute: MatchesRoute,
   AlbumCountryRoute: AlbumCountryRoute,
+  BuildTradeIdRoute: BuildTradeIdRoute,
   AlbumIndexRoute: AlbumIndexRoute,
 }
 export const routeTree = rootRouteImport
