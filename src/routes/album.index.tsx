@@ -42,6 +42,20 @@ function MyAlbum() {
   const [filter, setFilter] = useState<Filter>("all");
   const [query, setQuery] = useState("");
 
+  const ownedByStickerId = useMemo(
+    () => new Map(inventory.map((i) => [i.stickerId, i.quantityOwned])),
+    [inventory],
+  );
+
+  const countryProgress = useMemo(
+    () =>
+      countries.map((country) => ({
+        country,
+        owned: country.stickers.filter((s) => (ownedByStickerId.get(s.id) ?? 0) > 0).length,
+      })),
+    [ownedByStickerId],
+  );
+
   const items = useMemo(() => {
     const q = query.trim().toLowerCase();
     return inventory.filter((item) => {
@@ -117,12 +131,8 @@ function MyAlbum() {
           Countries
         </h2>
         <div className="flex gap-2 overflow-x-auto pb-1 no-scrollbar">
-          {countries.map((country) => {
-            const owned = country.stickers.filter(
-              (s) => (inventory.find((i) => i.stickerId === s.id)?.quantityOwned ?? 0) > 0,
-            ).length;
-            return (
-              <Link
+          {countryProgress.map(({ country, owned }) => (
+            <Link
                 key={country.slug}
                 to="/album/$country"
                 params={{ country: country.slug }}
@@ -138,9 +148,8 @@ function MyAlbum() {
                   className="mt-1.5"
                   label={`${country.name} progress`}
                 />
-              </Link>
-            );
-          })}
+            </Link>
+          ))}
         </div>
       </section>
 
