@@ -69,7 +69,7 @@ function generateInventory(userId: string, seed: number, ownRate: number): UserS
   const rand = rng(seed);
   return stickers.map((s) => {
     const owns = rand() < ownRate;
-    const dupes = owns && rand() < 0.28 ? 1 + Math.floor(rand() * 3) : 0;
+    const dupes = owns && rand() < 0.1 ? 1 + Math.floor(rand() * 2) : 0;
     const quantityOwned = owns ? 1 + dupes : 0;
     return {
       stickerId: s.id,
