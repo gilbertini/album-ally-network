@@ -1,278 +1,1147 @@
 /**
- * Placeholder checklist source. Replace this string with the full Panini FIFA
- * World Cup 2026 Markdown checklist (980 base stickers) and everything else
- * picks it up automatically via parseChecklist().
+ * Authoritative Panini FIFA World Cup 2026 base checklist (980 stickers).
+ *
+ * Swap this string for another album's Markdown checklist and the whole app
+ * follows via parseChecklist() in src/lib/checklist/parse.ts.
  */
 export const WORLD_CUP_2026_CHECKLIST_MD = String.raw`
-# Panini FIFA World Cup 2026 — Checklist
+# Panini FIFA World Cup 2026 — Complete Base Album Checklist
 
-## FIFA World Cup 🌍 (WC)
-- WC1 — FIFA World Cup Trophy
-- WC2 — Official Tournament Ball
-- WC3 — Official Tournament Mascots
-- WC4 — Host Cities Poster
+**Total base stickers: 980**
 
-## Argentina 🇦🇷 (ARG)
-- ARG1 — Team Emblem
-- ARG2 — Team Photo
-- ARG3 — Emiliano Martinez
-- ARG4 — Nicolas Otamendi
-- ARG5 — Cristian Romero
-- ARG6 — Nahuel Molina
-- ARG7 — Nicolas Tagliafico
-- ARG8 — Rodrigo De Paul
-- ARG9 — Enzo Fernandez
-- ARG10 — Alexis Mac Allister
-- ARG11 — Leandro Paredes
-- ARG12 — Giovani Lo Celso
-- ARG13 — Lionel Messi
-- ARG14 — Julian Alvarez
-- ARG15 — Lautaro Martinez
-- ARG16 — Angel Correa
-- ARG17 — Alejandro Garnacho
-- ARG18 — Exequiel Palacios
-- ARG19 — Gonzalo Montiel
-- ARG20 — Franco Armani
+> This checklist covers the standard base album: sticker 00, FWC1–FWC19, and 20 stickers for each of the 48 teams. It excludes shiny s variants and other regional/promotional, Extra, Coca-Cola, and Update stickers.
 
-## Brazil 🇧🇷 (BRA)
-- BRA1 — Team Emblem
-- BRA2 — Team Photo
-- BRA3 — Alisson Becker
-- BRA4 — Marquinhos
-- BRA5 — Gabriel Magalhaes
-- BRA6 — Danilo
-- BRA7 — Wendell
-- BRA8 — Bruno Guimaraes
-- BRA9 — Lucas Paqueta
-- BRA10 — Andre Santos
-- BRA11 — Vinicius Junior
-- BRA12 — Rodrygo
-- BRA13 — Raphinha
-- BRA14 — Endrick
-- BRA15 — Estevao Willian
-- BRA16 — Savinho
-- BRA17 — Joao Gomes
-- BRA18 — Bremer
-- BRA19 — Militao
-- BRA20 — Ederson
+## We Are Panini
 
-## Spain 🇪🇸 (ESP)
-- ESP1 — Team Emblem
-- ESP2 — Team Photo
-- ESP3 — Unai Simon
-- ESP4 — Robin Le Normand
-- ESP5 — Aymeric Laporte
-- ESP6 — Dani Carvajal
-- ESP7 — Marc Cucurella
-- ESP8 — Rodri
-- ESP9 — Pedri
-- ESP10 — Fabian Ruiz
-- ESP11 — Mikel Merino
-- ESP12 — Lamine Yamal
-- ESP13 — Nico Williams
-- ESP14 — Alvaro Morata
-- ESP15 — Ferran Torres
-- ESP16 — Dani Olmo
-- ESP17 — Mikel Oyarzabal
-- ESP18 — Pau Cubarsi
-- ESP19 — Martin Zubimendi
-- ESP20 — David Raya
+- [ ] **00** — Panini Logo
 
-## United States 🇺🇸 (USA)
-- USA1 — Team Emblem
-- USA2 — Team Photo
-- USA3 — Matt Turner
-- USA4 — Chris Richards
-- USA5 — Tim Ream
-- USA6 — Sergino Dest
-- USA7 — Antonee Robinson
-- USA8 — Tyler Adams
-- USA9 — Weston McKennie
-- USA10 — Yunus Musah
-- USA11 — Christian Pulisic
-- USA12 — Gio Reyna
-- USA13 — Folarin Balogun
-- USA14 — Ricardo Pepi
-- USA15 — Brenden Aaronson
-- USA16 — Malik Tillman
-- USA17 — Johnny Cardoso
-- USA18 — Joe Scally
-- USA19 — Zack Steffen
-- USA20 — Diego Luna
+## FIFA World Cup 2026
 
-## France 🇫🇷 (FRA)
-- FRA1 — Team Emblem
-- FRA2 — Team Photo
-- FRA3 — Mike Maignan
-- FRA4 — Dayot Upamecano
-- FRA5 — William Saliba
-- FRA6 — Jules Kounde
-- FRA7 — Theo Hernandez
-- FRA8 — Aurelien Tchouameni
-- FRA9 — Eduardo Camavinga
-- FRA10 — Adrien Rabiot
-- FRA11 — Antoine Griezmann
-- FRA12 — Kylian Mbappe
-- FRA13 — Ousmane Dembele
-- FRA14 — Marcus Thuram
-- FRA15 — Randal Kolo Muani
-- FRA16 — Bradley Barcola
-- FRA17 — Warren Zaire-Emery
-- FRA18 — Ibrahima Konate
-- FRA19 — Lucas Digne
-- FRA20 — Brice Samba
+- [ ] **FWC1** — Official Emblem1
+- [ ] **FWC2** — Official Emblem2
+- [ ] **FWC3** — Official Mascots
+- [ ] **FWC4** — Official Slogan
+- [ ] **FWC5** — Official Ball
+- [ ] **FWC6** — Canada
+- [ ] **FWC7** — Mexico
+- [ ] **FWC8** — USA
+- [ ] **FWC9** — Italy 1934
+- [ ] **FWC10** — Uruguay 1950
+- [ ] **FWC11** — West Germany 1954
+- [ ] **FWC12** — Brazil 1962
+- [ ] **FWC13** — West Germany 1974
+- [ ] **FWC14** — Argentina 1986
+- [ ] **FWC15** — Brazil 1994
+- [ ] **FWC16** — Brazil 2002
+- [ ] **FWC17** — Italy 2006
+- [ ] **FWC18** — Germany 2014
+- [ ] **FWC19** — Argentina 2022
 
-## Portugal 🇵🇹 (POR)
-- POR1 — Team Emblem
-- POR2 — Team Photo
-- POR3 — Diogo Costa
-- POR4 — Ruben Dias
-- POR5 — Goncalo Inacio
-- POR6 — Nuno Mendes
-- POR7 — Joao Cancelo
-- POR8 — Bruno Fernandes
-- POR9 — Vitinha
-- POR10 — Joao Palhinha
-- POR11 — Bernardo Silva
-- POR12 — Cristiano Ronaldo
-- POR13 — Rafael Leao
-- POR14 — Goncalo Ramos
-- POR15 — Pedro Neto
-- POR16 — Francisco Conceicao
-- POR17 — Joao Neves
-- POR18 — Antonio Silva
-- POR19 — Nelson Semedo
-- POR20 — Jose Sa
+## Mexico
 
-## Mexico 🇲🇽 (MEX)
-- MEX1 — Team Emblem
-- MEX2 — Team Photo
-- MEX3 — Guillermo Ochoa
-- MEX4 — Cesar Montes
-- MEX5 — Johan Vasquez
-- MEX6 — Jorge Sanchez
-- MEX7 — Jesus Gallardo
-- MEX8 — Edson Alvarez
-- MEX9 — Luis Chavez
-- MEX10 — Orbelin Pineda
-- MEX11 — Hirving Lozano
-- MEX12 — Raul Jimenez
-- MEX13 — Santiago Gimenez
-- MEX14 — Alexis Vega
-- MEX15 — Uriel Antuna
-- MEX16 — Diego Lainez
-- MEX17 — Erick Sanchez
-- MEX18 — Israel Reyes
-- MEX19 — Julian Quinones
-- MEX20 — Luis Malagon
+- [ ] **MEX1** — Emblem
+- [ ] **MEX2** — Luis Malagón
+- [ ] **MEX3** — Johan Vasquez
+- [ ] **MEX4** — Jorge Sánchez
+- [ ] **MEX5** — Cesar Montes
+- [ ] **MEX6** — Jesus Gallardo
+- [ ] **MEX7** — Israel Reyes
+- [ ] **MEX8** — Diego Lainez
+- [ ] **MEX9** — Carlos Rodriguez
+- [ ] **MEX10** — Edson Alvarez
+- [ ] **MEX11** — Orbelin Pineda
+- [ ] **MEX12** — Marcel Ruiz
+- [ ] **MEX13** — Team Photo
+- [ ] **MEX14** — Érick Sánchez
+- [ ] **MEX15** — Hirving Lozano
+- [ ] **MEX16** — Santiago Giménez
+- [ ] **MEX17** — Raúl Jiménez
+- [ ] **MEX18** — Alexis Vega
+- [ ] **MEX19** — Roberto Alvarado
+- [ ] **MEX20** — Cesar Huerta
 
-## England 🏴 (ENG)
-- ENG1 — Team Emblem
-- ENG2 — Team Photo
-- ENG3 — Jordan Pickford
-- ENG4 — John Stones
-- ENG5 — Marc Guehi
-- ENG6 — Kyle Walker
-- ENG7 — Lewis Hall
-- ENG8 — Declan Rice
-- ENG9 — Jude Bellingham
-- ENG10 — Cole Palmer
-- ENG11 — Bukayo Saka
-- ENG12 — Harry Kane
-- ENG13 — Phil Foden
-- ENG14 — Anthony Gordon
-- ENG15 — Ollie Watkins
-- ENG16 — Morgan Rogers
-- ENG17 — Adam Wharton
-- ENG18 — Ezri Konsa
-- ENG19 — Levi Colwill
-- ENG20 — Dean Henderson
+## South Africa
 
-## Germany 🇩🇪 (GER)
-- GER1 — Team Emblem
-- GER2 — Team Photo
-- GER3 — Manuel Neuer
-- GER4 — Antonio Ruediger
-- GER5 — Jonathan Tah
-- GER6 — Joshua Kimmich
-- GER7 — Maximilian Mittelstaedt
-- GER8 — Robert Andrich
-- GER9 — Jamal Musiala
-- GER10 — Florian Wirtz
-- GER11 — Kai Havertz
-- GER12 — Niclas Fuellkrug
-- GER13 — Leroy Sane
-- GER14 — Serge Gnabry
-- GER15 — Deniz Undav
-- GER16 — Aleksandar Pavlovic
-- GER17 — Angelo Stiller
-- GER18 — Nico Schlotterbeck
-- GER19 — David Raum
-- GER20 — Oliver Baumann
+- [ ] **RSA1** — Emblem
+- [ ] **RSA2** — Ronwen Williams
+- [ ] **RSA3** — Sipho Chaine
+- [ ] **RSA4** — Aubrey Modiba
+- [ ] **RSA5** — Samukele Kabini
+- [ ] **RSA6** — Mbekezeli Mbokazi
+- [ ] **RSA7** — Khulumani Ndamane
+- [ ] **RSA8** — Siyabonga Ngezana
+- [ ] **RSA9** — Khuliso Mudau
+- [ ] **RSA10** — Nkosinathi Sibisi
+- [ ] **RSA11** — Teboho Mokoena
+- [ ] **RSA12** — Thalente Mbatha
+- [ ] **RSA13** — Team Photo
+- [ ] **RSA14** — Bathusi Aubaas
+- [ ] **RSA15** — Yaya Sithole
+- [ ] **RSA16** — Sipho Mbule
+- [ ] **RSA17** — Lyle Foster
+- [ ] **RSA18** — Iqraam Rayners
+- [ ] **RSA19** — Mohau Nkota
+- [ ] **RSA20** — Oswin Appollis
 
-## Netherlands 🇳🇱 (NED)
-- NED1 — Team Emblem
-- NED2 — Team Photo
-- NED3 — Bart Verbruggen
-- NED4 — Virgil van Dijk
-- NED5 — Stefan de Vrij
-- NED6 — Denzel Dumfries
-- NED7 — Nathan Ake
-- NED8 — Frenkie de Jong
-- NED9 — Tijjani Reijnders
-- NED10 — Jerdy Schouten
-- NED11 — Cody Gakpo
-- NED12 — Memphis Depay
-- NED13 — Xavi Simons
-- NED14 — Donyell Malen
-- NED15 — Brian Brobbey
-- NED16 — Joshua Zirkzee
-- NED17 — Ryan Gravenberch
-- NED18 — Micky van de Ven
-- NED19 — Jurrien Timber
-- NED20 — Justin Bijlow
+## South Korea
 
-## Canada 🇨🇦 (CAN)
-- CAN1 — Team Emblem
-- CAN2 — Team Photo
-- CAN3 — Maxime Crepeau
-- CAN4 — Alistair Johnston
-- CAN5 — Moise Bombito
-- CAN6 — Richie Laryea
-- CAN7 — Alphonso Davies
-- CAN8 — Stephen Eustaquio
-- CAN9 — Ismael Kone
-- CAN10 — Mathieu Choiniere
-- CAN11 — Tajon Buchanan
-- CAN12 — Jonathan David
-- CAN13 — Cyle Larin
-- CAN14 — Liam Millar
-- CAN15 — Jacob Shaffelburg
-- CAN16 — Ali Ahmed
-- CAN17 — Jonathan Osorio
-- CAN18 — Derek Cornelius
-- CAN19 — Kamal Miller
-- CAN20 — Dayne St. Clair
+- [ ] **KOR1** — Emblem
+- [ ] **KOR2** — Hyeon-woo Jo
+- [ ] **KOR3** — Seung-Gyu Kim
+- [ ] **KOR4** — Min-jae Kim
+- [ ] **KOR5** — Yu-min Cho
+- [ ] **KOR6** — Young-woo Seol
+- [ ] **KOR7** — Han-beom Lee
+- [ ] **KOR8** — Tae-seok Lee
+- [ ] **KOR9** — Myung-jae Lee
+- [ ] **KOR10** — Jae-sung Lee
+- [ ] **KOR11** — In-beom Hwang
+- [ ] **KOR12** — Kang-in Lee
+- [ ] **KOR13** — Team Photo
+- [ ] **KOR14** — Seung-ho Paik
+- [ ] **KOR15** — Jens Castrop
+- [ ] **KOR16** — Dongg-yeong Lee
+- [ ] **KOR17** — Gue-sung Cho
+- [ ] **KOR18** — Heung-min Son
+- [ ] **KOR19** — Hee-chan Hwang
+- [ ] **KOR20** — Hyeon-Gyu Oh
 
-## Japan 🇯🇵 (JPN)
-- JPN1 — Team Emblem
-- JPN2 — Team Photo
-- JPN3 — Zion Suzuki
-- JPN4 — Ko Itakura
-- JPN5 — Shogo Taniguchi
-- JPN6 — Takehiro Tomiyasu
-- JPN7 — Yukinari Sugawara
-- JPN8 — Wataru Endo
-- JPN9 — Hidemasa Morita
-- JPN10 — Kaoru Mitoma
-- JPN11 — Takefusa Kubo
-- JPN12 — Daizen Maeda
-- JPN13 — Ayase Ueda
-- JPN14 — Junya Ito
-- JPN15 — Ritsu Doan
-- JPN16 — Koki Machida
-- JPN17 — Reo Hatate
-- JPN18 — Keito Nakamura
-- JPN19 — Yuta Nakayama
-- JPN20 — Daniel Schmidt
+## Czechia
+
+- [ ] **CZE1** — Emblem
+- [ ] **CZE2** — Matej Kovar
+- [ ] **CZE3** — Jindrich Stanek
+- [ ] **CZE4** — Ladislav Krejci
+- [ ] **CZE5** — Vladimir Coufal
+- [ ] **CZE6** — Jaroslav Zeleny
+- [ ] **CZE7** — Tomas Holes
+- [ ] **CZE8** — David Zima
+- [ ] **CZE9** — Michal Sadilek
+- [ ] **CZE10** — Lukas Provod
+- [ ] **CZE11** — Lukas Cerv
+- [ ] **CZE12** — Tomas Soucek
+- [ ] **CZE13** — Team Photo
+- [ ] **CZE14** — Pavel Sulc
+- [ ] **CZE15** — Matej Vydra
+- [ ] **CZE16** — Vasil Kusej
+- [ ] **CZE17** — Tomas Chory
+- [ ] **CZE18** — Vaclav Cerny
+- [ ] **CZE19** — Adam Hlozek
+- [ ] **CZE20** — Patrik Schick
+
+## Canada
+
+- [ ] **CAN1** — Emblem
+- [ ] **CAN2** — Dayne St.Clair
+- [ ] **CAN3** — Alphonso Davies
+- [ ] **CAN4** — Alistair Johnston
+- [ ] **CAN5** — Samuel Adekugbe
+- [ ] **CAN6** — Richie Laryea
+- [ ] **CAN7** — Derek Cornelius
+- [ ] **CAN8** — Moïse Bombito
+- [ ] **CAN9** — Kamal Miller
+- [ ] **CAN10** — Stephen Eustáquio
+- [ ] **CAN11** — Ismaël Koné
+- [ ] **CAN12** — Jonathan Osorio
+- [ ] **CAN13** — Team Photo
+- [ ] **CAN14** — Jacob Shaffelburg
+- [ ] **CAN15** — Mathieu Choinière
+- [ ] **CAN16** — Niko Sigur
+- [ ] **CAN17** — Tajon Buchanan
+- [ ] **CAN18** — Liam Millar
+- [ ] **CAN19** — Cyle Larin
+- [ ] **CAN20** — Jonathan David
+
+## Bosnia and Herzegovina
+
+- [ ] **BIH1** — Emblem
+- [ ] **BIH2** — Nikola Vasilj
+- [ ] **BIH3** — Amer Dedic
+- [ ] **BIH4** — Sead Kolasinac
+- [ ] **BIH5** — Tarik Muharemovic
+- [ ] **BIH6** — Nihad Mujakic
+- [ ] **BIH7** — Nikola Katic
+- [ ] **BIH8** — Amir Hadziahmetovic
+- [ ] **BIH9** — Benjamin Tahirovic
+- [ ] **BIH10** — Armin Gigovic
+- [ ] **BIH11** — Ivan Sunjic
+- [ ] **BIH12** — Ivan Basic
+- [ ] **BIH13** — Team Photo
+- [ ] **BIH14** — Dzenis Burnic
+- [ ] **BIH15** — Esmir Bajraktarevic
+- [ ] **BIH16** — Amar Memic
+- [ ] **BIH17** — Ermedin Demirovic
+- [ ] **BIH18** — Edin Dzeko
+- [ ] **BIH19** — Samed Bazdar
+- [ ] **BIH20** — Haris Tabakovic
+
+## Qatar
+
+- [ ] **QAT1** — Emblem
+- [ ] **QAT2** — Meshaal Barsham
+- [ ] **QAT3** — Sultan Albrake
+- [ ] **QAT4** — Lucas Mendes
+- [ ] **QAT5** — Homam Ahmed
+- [ ] **QAT6** — Boualem Khoukhi
+- [ ] **QAT7** — Pedro Miguel
+- [ ] **QAT8** — Tarek Salman
+- [ ] **QAT9** — Mohamed Al-Mannai
+- [ ] **QAT10** — Karim Boudiaf
+- [ ] **QAT11** — Assim Madibo
+- [ ] **QAT12** — Ahmed Fatehi
+- [ ] **QAT13** — Team Photo
+- [ ] **QAT14** — Mohammed Waad
+- [ ] **QAT15** — Abdulaziz Hatem
+- [ ] **QAT16** — Hassan Al-Haydos
+- [ ] **QAT17** — Edmilson Junior
+- [ ] **QAT18** — Akram Hassan Afif
+- [ ] **QAT19** — Ahmed Al Ganehi
+- [ ] **QAT20** — Almoez Ali
+
+## Switzerland
+
+- [ ] **SUI1** — Emblem
+- [ ] **SUI2** — Gregor Kobel
+- [ ] **SUI3** — Yvon Mvogo
+- [ ] **SUI4** — Manuel Akanji
+- [ ] **SUI5** — Ricardo Rodriguez
+- [ ] **SUI6** — Nico Elvedi
+- [ ] **SUI7** — Aurèle Amenda
+- [ ] **SUI8** — Silvan Widmer
+- [ ] **SUI9** — Granit Xhaka
+- [ ] **SUI10** — Denis Zakaria
+- [ ] **SUI11** — Remo Freuler
+- [ ] **SUI12** — Fabian Rieder
+- [ ] **SUI13** — Team Photo
+- [ ] **SUI14** — Ardon Jashari
+- [ ] **SUI15** — Johan Manzambi
+- [ ] **SUI16** — Michel Aebischer
+- [ ] **SUI17** — Breel Embolo
+- [ ] **SUI18** — Ruben Vargas
+- [ ] **SUI19** — Dan Ndoye
+- [ ] **SUI20** — Zeki Amdouni
+
+## Brazil
+
+- [ ] **BRA1** — Emblem
+- [ ] **BRA2** — Alisson
+- [ ] **BRA3** — Bento
+- [ ] **BRA4** — Marquinhos
+- [ ] **BRA5** — Éder Militão
+- [ ] **BRA6** — Gabriel Magalhães
+- [ ] **BRA7** — Danilo
+- [ ] **BRA8** — Wesley
+- [ ] **BRA9** — Lucas Paquetá
+- [ ] **BRA10** — Casemiro
+- [ ] **BRA11** — Bruno Guimarães
+- [ ] **BRA12** — Luiz Henrique
+- [ ] **BRA13** — Team Photo
+- [ ] **BRA14** — Vinicius Júnior
+- [ ] **BRA15** — Rodrygo
+- [ ] **BRA16** — João Pedro
+- [ ] **BRA17** — Matheus Cunha
+- [ ] **BRA18** — Gabriel Martinelli
+- [ ] **BRA19** — Raphinha
+- [ ] **BRA20** — Estévão
+
+## Morocco
+
+- [ ] **MAR1** — Emblem
+- [ ] **MAR2** — Yassine Bounou
+- [ ] **MAR3** — Munir El Kajoui
+- [ ] **MAR4** — Achraf Hakimi
+- [ ] **MAR5** — Noussair Mazraoui
+- [ ] **MAR6** — Nayef Aguerd
+- [ ] **MAR7** — Romain Saïss
+- [ ] **MAR8** — Jawad El Yamiq
+- [ ] **MAR9** — Adam Masina
+- [ ] **MAR10** — Sofyan Amrabat
+- [ ] **MAR11** — Azzedine Ounahi
+- [ ] **MAR12** — Eliesse Ben Seghir
+- [ ] **MAR13** — Team Photo
+- [ ] **MAR14** — Bilal El Khannouss
+- [ ] **MAR15** — Ismael Saibari
+- [ ] **MAR16** — Youssef En-Nesyri
+- [ ] **MAR17** — Abde Ezzalzouli
+- [ ] **MAR18** — Soufiane Rahimi
+- [ ] **MAR19** — Brahim Diaz
+- [ ] **MAR20** — Ayoub El Kaabi
+
+## Haiti
+
+- [ ] **HAI1** — Emblem
+- [ ] **HAI2** — Johny Placide
+- [ ] **HAI3** — Carlens Arcus
+- [ ] **HAI4** — Martin Expérience
+- [ ] **HAI5** — Jean-Kevin Duverne
+- [ ] **HAI6** — Ricardo Adé
+- [ ] **HAI7** — Duke Lacroix
+- [ ] **HAI8** — Garven Metusala
+- [ ] **HAI9** — Hannes Delcroix
+- [ ] **HAI10** — Leverton Pierre
+- [ ] **HAI11** — Danley Jean Jacques
+- [ ] **HAI12** — Jean-Ricner Bellegarde
+- [ ] **HAI13** — Team Photo
+- [ ] **HAI14** — Christopher Attys
+- [ ] **HAI15** — Derrick Etienne Jr
+- [ ] **HAI16** — Josue Casimir
+- [ ] **HAI17** — Ruben Providence
+- [ ] **HAI18** — Duckens Nazon
+- [ ] **HAI19** — Louicius Deedson
+- [ ] **HAI20** — Frantzdy Pierrot
+
+## Scotland
+
+- [ ] **SCO1** — Emblem
+- [ ] **SCO2** — Angus Gunn
+- [ ] **SCO3** — Jack Hendry
+- [ ] **SCO4** — Kieran Tierney
+- [ ] **SCO5** — Aaron Hickey
+- [ ] **SCO6** — Andrew Robertson
+- [ ] **SCO7** — Scott McKenna
+- [ ] **SCO8** — John Souttar
+- [ ] **SCO9** — Anthony Ralston
+- [ ] **SCO10** — Grant Hanley
+- [ ] **SCO11** — Scott McTominay
+- [ ] **SCO12** — Billy Gilmour
+- [ ] **SCO13** — Team Photo
+- [ ] **SCO14** — Lewis Ferguson
+- [ ] **SCO15** — Ryan Christie
+- [ ] **SCO16** — Kenny McLean
+- [ ] **SCO17** — John McGinn
+- [ ] **SCO18** — Lyndon Dykes
+- [ ] **SCO19** — Che Adams
+- [ ] **SCO20** — Ben Gannon-Doak
+
+## USA
+
+- [ ] **USA1** — Emblem
+- [ ] **USA2** — Matt Freese
+- [ ] **USA3** — Chris Richards
+- [ ] **USA4** — Tim Ream
+- [ ] **USA5** — Mark McKenzie
+- [ ] **USA6** — Alex Freeman
+- [ ] **USA7** — Antonee Robinson
+- [ ] **USA8** — Tyler Adams
+- [ ] **USA9** — Tanner Tessmann
+- [ ] **USA10** — Weston McKenny
+- [ ] **USA11** — Christian Roldan
+- [ ] **USA12** — Timothy Weah
+- [ ] **USA13** — Team Photo
+- [ ] **USA14** — Diego Luna
+- [ ] **USA15** — Malik Tillman
+- [ ] **USA16** — Christian Pulisic
+- [ ] **USA17** — Brenden Aaronson
+- [ ] **USA18** — Ricardo Pepi
+- [ ] **USA19** — Haji Wright
+- [ ] **USA20** — Folarin Balogun
+
+## Paraguay
+
+- [ ] **PAR1** — Emblem
+- [ ] **PAR2** — Roberto Fernandez
+- [ ] **PAR3** — Orlando Gill
+- [ ] **PAR4** — Gustavo Gomez
+- [ ] **PAR5** — Fabián Balbuena
+- [ ] **PAR6** — Juan José Cáceres
+- [ ] **PAR7** — Omar Alderete
+- [ ] **PAR8** — Junior Alonso
+- [ ] **PAR9** — Mathías Villasanti
+- [ ] **PAR10** — Diego Gomez
+- [ ] **PAR11** — Damián Bobadilla
+- [ ] **PAR12** — Andres Cubas
+- [ ] **PAR13** — Team Photo
+- [ ] **PAR14** — Matias Galarza Fonda
+- [ ] **PAR15** — Julio Enciso
+- [ ] **PAR16** — Alejandro Romero Gamarra
+- [ ] **PAR17** — Miguel Almirón
+- [ ] **PAR18** — Ramon Sosa
+- [ ] **PAR19** — Angel Romero
+- [ ] **PAR20** — Antonio Sanabria
+
+## Australia
+
+- [ ] **AUS1** — Emblem
+- [ ] **AUS2** — Mathew Ryan
+- [ ] **AUS3** — Joe Gauci
+- [ ] **AUS4** — Harry Souttar
+- [ ] **AUS5** — Alessandro Circati
+- [ ] **AUS6** — Jordan Bos
+- [ ] **AUS7** — Aziz Behich
+- [ ] **AUS8** — Cameron Burgess
+- [ ] **AUS9** — Lewis Miller
+- [ ] **AUS10** — Milos Degenek
+- [ ] **AUS11** — Jackson Irvine
+- [ ] **AUS12** — Riley McGree
+- [ ] **AUS13** — Team Photo
+- [ ] **AUS14** — Aiden O'Neill
+- [ ] **AUS15** — Connor Metcalfe
+- [ ] **AUS16** — Patrick Yazbek
+- [ ] **AUS17** — Craig Goodwin
+- [ ] **AUS18** — Kusini Yengi
+- [ ] **AUS19** — Nestory Irankunda
+- [ ] **AUS20** — Mohamed Touré
+
+## Türkiye
+
+- [ ] **TUR1** — Emblem
+- [ ] **TUR2** — Ugurcan Cakir
+- [ ] **TUR3** — Mert Muldur
+- [ ] **TUR4** — Zeki Celik
+- [ ] **TUR5** — Abdulkerim Bardakci
+- [ ] **TUR6** — Caglar Soyuncu
+- [ ] **TUR7** — Merih Demiral
+- [ ] **TUR8** — Ferdi Kadioglu
+- [ ] **TUR9** — Kaan Ayhan
+- [ ] **TUR10** — Ismail Yuksek
+- [ ] **TUR11** — Hakan Calhanoglu
+- [ ] **TUR12** — Orkun Kokcu
+- [ ] **TUR13** — Team Photo
+- [ ] **TUR14** — Arda Guler
+- [ ] **TUR15** — Irfan Can Kahveci
+- [ ] **TUR16** — Yunus Akgun
+- [ ] **TUR17** — Can Uzun
+- [ ] **TUR18** — Baris Alper Yilmaz
+- [ ] **TUR19** — Kerem Akturkoglu
+- [ ] **TUR20** — Kenan Yildiz
+
+## Germany
+
+- [ ] **GER1** — Emblem
+- [ ] **GER2** — Marc-André ter Stegen
+- [ ] **GER3** — Jonathan Tah
+- [ ] **GER4** — David Raum
+- [ ] **GER5** — Nico Schlotterbeck
+- [ ] **GER6** — Antonio Rüdiger
+- [ ] **GER7** — Waldemar Anton
+- [ ] **GER8** — Ridle Baku
+- [ ] **GER9** — Maximilian Mittelstadt
+- [ ] **GER10** — Joshua Kimmich
+- [ ] **GER11** — Florian Wirtz
+- [ ] **GER12** — Felix Nmecha
+- [ ] **GER13** — Team Photo
+- [ ] **GER14** — Leon Goretzka
+- [ ] **GER15** — Jamal Musiala
+- [ ] **GER16** — Serge Gnabry
+- [ ] **GER17** — Kai Havertz
+- [ ] **GER18** — Leroy Sane
+- [ ] **GER19** — Karim Adeyemi
+- [ ] **GER20** — Nick Woltemade
+
+## Curaçao
+
+- [ ] **CUW1** — Emblem
+- [ ] **CUW2** — Eloy Room
+- [ ] **CUW3** — Armando Obispo
+- [ ] **CUW4** — Sherel Floranus
+- [ ] **CUW5** — Jurien Gaari
+- [ ] **CUW6** — Joshua Brenet
+- [ ] **CUW7** — Roshon Van Eijma
+- [ ] **CUW8** — Shurandy Sambo
+- [ ] **CUW9** — Livano Comenencia
+- [ ] **CUW10** — Godfried Roemeratoe
+- [ ] **CUW11** — Juninho Bacuna
+- [ ] **CUW12** — Leandro Bacuna
+- [ ] **CUW13** — Team Photo
+- [ ] **CUW14** — Tahith Chong
+- [ ] **CUW15** — Kenji Gorre
+- [ ] **CUW16** — Jearl Margaritha
+- [ ] **CUW17** — Jurgen Locadia
+- [ ] **CUW18** — Jeremy Antonisse
+- [ ] **CUW19** — Gervane Kastaneer
+- [ ] **CUW20** — Sontje Hansen
+
+## Ivory Coast
+
+- [ ] **CIV1** — Emblem
+- [ ] **CIV2** — Yahia Fofana
+- [ ] **CIV3** — Ghislain Konan
+- [ ] **CIV4** — Wilfried Singo
+- [ ] **CIV5** — Odilon Kossounou
+- [ ] **CIV6** — Evan Ndicka
+- [ ] **CIV7** — Willy Boly
+- [ ] **CIV8** — Emmanuel Agbadou
+- [ ] **CIV9** — Ousmane Diomande
+- [ ] **CIV10** — Franck Kessie
+- [ ] **CIV11** — Seko Fofana
+- [ ] **CIV12** — Ibrahim Sangare
+- [ ] **CIV13** — Team Photo
+- [ ] **CIV14** — Jean-Philippe Gbamin
+- [ ] **CIV15** — Amad Diallo
+- [ ] **CIV16** — Sébastien Haller
+- [ ] **CIV17** — Simon Adingra
+- [ ] **CIV18** — Yan Diomande
+- [ ] **CIV19** — Evann Guessand
+- [ ] **CIV20** — Oumar Diakite
+
+## Ecuador
+
+- [ ] **ECU1** — Emblem
+- [ ] **ECU2** — Hernán Galíndez
+- [ ] **ECU3** — Gonzalo Valle
+- [ ] **ECU4** — Piero Hincapié
+- [ ] **ECU5** — Pervis Estupiñán
+- [ ] **ECU6** — Willian Pacho
+- [ ] **ECU7** — Ángelo Preciado
+- [ ] **ECU8** — Joel Ordóñez
+- [ ] **ECU9** — Moises Caicedo
+- [ ] **ECU10** — Alan Franco
+- [ ] **ECU11** — Kendry Paez
+- [ ] **ECU12** — Pedro Vite
+- [ ] **ECU13** — Team Photo
+- [ ] **ECU14** — John Yeboah
+- [ ] **ECU15** — Leonardo Campana
+- [ ] **ECU16** — Gonzalo Plata
+- [ ] **ECU17** — Nilson Angulo
+- [ ] **ECU18** — Alan Minda
+- [ ] **ECU19** — Kevin Rodriguez
+- [ ] **ECU20** — Enner Valencia
+
+## Netherlands
+
+- [ ] **NED1** — Emblem
+- [ ] **NED2** — Bart Verbruggen
+- [ ] **NED3** — Virgil van Dijk
+- [ ] **NED4** — Micky van de Ven
+- [ ] **NED5** — Jurrien Timber
+- [ ] **NED6** — Denzel Dumfries
+- [ ] **NED7** — Nathan Aké
+- [ ] **NED8** — Jeremie Frimpong
+- [ ] **NED9** — Jan Paul van Hecke
+- [ ] **NED10** — Tijjani Reijnders
+- [ ] **NED11** — Ryan Gravenberch
+- [ ] **NED12** — Teun Koopmeiners
+- [ ] **NED13** — Team Photo
+- [ ] **NED14** — Frenkie de Jong
+- [ ] **NED15** — Xavi Simons
+- [ ] **NED16** — Justin Kluivert
+- [ ] **NED17** — Memphis Depay
+- [ ] **NED18** — Donyell Malen
+- [ ] **NED19** — Wout Weghorst
+- [ ] **NED20** — Cody Gakpo
+
+## Japan
+
+- [ ] **JPN1** — Emblem
+- [ ] **JPN2** — Zion Suzuki
+- [ ] **JPN3** — Henry Heroki Mochizuki
+- [ ] **JPN4** — Ayumu Seko
+- [ ] **JPN5** — Junnosuke Suzuki
+- [ ] **JPN6** — Shogo Taniguchi
+- [ ] **JPN7** — Tsuyoshi Watanabe
+- [ ] **JPN8** — Kaishu Sano
+- [ ] **JPN9** — Yuki Soma
+- [ ] **JPN10** — Ao Tanaka
+- [ ] **JPN11** — Daichi Kamada
+- [ ] **JPN12** — Takefusa Kubo
+- [ ] **JPN13** — Team Photo
+- [ ] **JPN14** — Ritsu Doan
+- [ ] **JPN15** — Keito Nakamura
+- [ ] **JPN16** — Takumi Minamino
+- [ ] **JPN17** — Shuto Machino
+- [ ] **JPN18** — Junya Ito
+- [ ] **JPN19** — Koki Ogawa
+- [ ] **JPN20** — Ayase Ueda
+
+## Sweden
+
+- [ ] **SWE1** — Emblem
+- [ ] **SWE2** — Victor Johansson
+- [ ] **SWE3** — Isak Hien
+- [ ] **SWE4** — Gabriel Gudmundsson
+- [ ] **SWE5** — Emil Holm
+- [ ] **SWE6** — Victor Nilsson Lindelöf
+- [ ] **SWE7** — Gustaf Lagerbielke
+- [ ] **SWE8** — Lucas Bergvall
+- [ ] **SWE9** — Hugo Larsson
+- [ ] **SWE10** — Jesper Karlström
+- [ ] **SWE11** — Yasin Ayari
+- [ ] **SWE12** — Mattias Svanberg
+- [ ] **SWE13** — Team Photo
+- [ ] **SWE14** — Daniel Svensson
+- [ ] **SWE15** — Ken Sema
+- [ ] **SWE16** — Roony Bardghji
+- [ ] **SWE17** — Dejan Kulusevski
+- [ ] **SWE18** — Anthony Elanga
+- [ ] **SWE19** — Alexander Isak
+- [ ] **SWE20** — Viktor Gyökeres
+
+## Tunisia
+
+- [ ] **TUN1** — Emblem
+- [ ] **TUN2** — Bechir Ben Said
+- [ ] **TUN3** — Aymen Dahmen
+- [ ] **TUN4** — Yan Valery
+- [ ] **TUN5** — Montassar Talbi
+- [ ] **TUN6** — Yassine Meriah
+- [ ] **TUN7** — Ali Abdi
+- [ ] **TUN8** — Dylan Bronn
+- [ ] **TUN9** — Ellyes Skhiri
+- [ ] **TUN10** — Aissa Laidouni
+- [ ] **TUN11** — Ferjani Sassi
+- [ ] **TUN12** — Mohamed Ali Ben Romdhane
+- [ ] **TUN13** — Team Photo
+- [ ] **TUN14** — Hannibal Mejbri
+- [ ] **TUN15** — Elias Achouri
+- [ ] **TUN16** — Elias Saad
+- [ ] **TUN17** — Hazem Mastouri
+- [ ] **TUN18** — Ismael Gharbi
+- [ ] **TUN19** — Sayfallah Ltaief
+- [ ] **TUN20** — Naim Sliti
+
+## Belgium
+
+- [ ] **BEL1** — Emblem
+- [ ] **BEL2** — Thibaut Courtois
+- [ ] **BEL3** — Arthur Theate
+- [ ] **BEL4** — Timothy Castagne
+- [ ] **BEL5** — Zeno Debast
+- [ ] **BEL6** — Brandon Mechele
+- [ ] **BEL7** — Maxim De Cuyper
+- [ ] **BEL8** — Thomas Meunier
+- [ ] **BEL9** — Youri Tielemans
+- [ ] **BEL10** — Amadou Onana
+- [ ] **BEL11** — Nicolas Raskin
+- [ ] **BEL12** — Alexis Saelemaekers
+- [ ] **BEL13** — Team Photo
+- [ ] **BEL14** — Hans Vanaken
+- [ ] **BEL15** — Kevin De Bruyne
+- [ ] **BEL16** — Jérémy Doku
+- [ ] **BEL17** — Charles De Ketelaere
+- [ ] **BEL18** — Leandro Trossard
+- [ ] **BEL19** — Loïs Openda
+- [ ] **BEL20** — Romelu Lukaku
+
+## Egypt
+
+- [ ] **EGY1** — Emblem
+- [ ] **EGY2** — Mohamed El Shenawy
+- [ ] **EGY3** — Mohamed Hany
+- [ ] **EGY4** — Mohamed Hamdy
+- [ ] **EGY5** — Yasser Ibrahim
+- [ ] **EGY6** — Khaled Sobhi
+- [ ] **EGY7** — Ramy Rabia
+- [ ] **EGY8** — Hossam Abdelmaguid
+- [ ] **EGY9** — Ahmed Fatouh
+- [ ] **EGY10** — Marwan Attia
+- [ ] **EGY11** — Zizo
+- [ ] **EGY12** — Hamdy Fathy
+- [ ] **EGY13** — Team Photo
+- [ ] **EGY14** — Mohamed Lasheen
+- [ ] **EGY15** — Emam Ashour
+- [ ] **EGY16** — Osama Faisal
+- [ ] **EGY17** — Mohamed Salah
+- [ ] **EGY18** — Mostafa Mohamed
+- [ ] **EGY19** — Trezeguet
+- [ ] **EGY20** — Omar Marmoush
+
+## Iran
+
+- [ ] **IRN1** — Emblem
+- [ ] **IRN2** — Alireza Beiranvand
+- [ ] **IRN3** — Morteza Pouraliganji
+- [ ] **IRN4** — Ehsan Hajsafi
+- [ ] **IRN5** — Milad Mohammadi
+- [ ] **IRN6** — Shojae Khalilzadeh
+- [ ] **IRN7** — Ramin Rezaeian
+- [ ] **IRN8** — Hossein Kanaani
+- [ ] **IRN9** — Sadegh Moharrami
+- [ ] **IRN10** — Saleh Hardani
+- [ ] **IRN11** — Saeed Ezatolahi
+- [ ] **IRN12** — Saman Ghoddos
+- [ ] **IRN13** — Team Photo
+- [ ] **IRN14** — Omid Noorafkan
+- [ ] **IRN15** — Roozbeh Cheshmi
+- [ ] **IRN16** — Mohammad Mohebi
+- [ ] **IRN17** — Sardar Azmoun
+- [ ] **IRN18** — Mehdi Taremi
+- [ ] **IRN19** — Alireza Jahanbakhsh
+- [ ] **IRN20** — Ali Gholizadeh
+
+## New Zealand
+
+- [ ] **NZL1** — Emblem
+- [ ] **NZL2** — Max Crocombe
+- [ ] **NZL3** — Alex Paulsen
+- [ ] **NZL4** — Michael Boxall
+- [ ] **NZL5** — Liberato Cacace
+- [ ] **NZL6** — Tim Payne
+- [ ] **NZL7** — Tyler Bindon
+- [ ] **NZL8** — Francis de Vries
+- [ ] **NZL9** — Finn Surman
+- [ ] **NZL10** — Joe Bell
+- [ ] **NZL11** — Sarpreet Singh
+- [ ] **NZL12** — Ryan Thomas
+- [ ] **NZL13** — Team Photo
+- [ ] **NZL14** — Matthew Garbett
+- [ ] **NZL15** — Marko Stamenić
+- [ ] **NZL16** — Ben Old
+- [ ] **NZL17** — Chris Wood
+- [ ] **NZL18** — Elijah Just
+- [ ] **NZL19** — Callum McCowatt
+- [ ] **NZL20** — Kosta Barbarouses
+
+## Spain
+
+- [ ] **ESP1** — Emblem
+- [ ] **ESP2** — Unai Simon
+- [ ] **ESP3** — Robin Le Normand
+- [ ] **ESP4** — Aymeric Laporte
+- [ ] **ESP5** — Dean Huijsen
+- [ ] **ESP6** — Pedro Porro
+- [ ] **ESP7** — Dani Carvajal
+- [ ] **ESP8** — Marc Cucurella
+- [ ] **ESP9** — Martín Zubimendi
+- [ ] **ESP10** — Rodri
+- [ ] **ESP11** — Pedri
+- [ ] **ESP12** — Fabian Ruiz
+- [ ] **ESP13** — Team Photo
+- [ ] **ESP14** — Mikel Merino
+- [ ] **ESP15** — Lamine Yamal
+- [ ] **ESP16** — Dani Olmo
+- [ ] **ESP17** — Nico Williams
+- [ ] **ESP18** — Ferran Torres
+- [ ] **ESP19** — Álvaro Morata
+- [ ] **ESP20** — Mikel Oyarzabal
+
+## Cape Verde
+
+- [ ] **CPV1** — Emblem
+- [ ] **CPV2** — Vozinha
+- [ ] **CPV3** — Logan Costa
+- [ ] **CPV4** — Pico
+- [ ] **CPV5** — Diney
+- [ ] **CPV6** — Steven Moreira
+- [ ] **CPV7** — Wagner Pina
+- [ ] **CPV8** — Joao Paulo
+- [ ] **CPV9** — Yannick Semedo
+- [ ] **CPV10** — Kevin Pina
+- [ ] **CPV11** — Patrick Andrade
+- [ ] **CPV12** — Jamiro Monteiro
+- [ ] **CPV13** — Team Photo
+- [ ] **CPV14** — Deroy Duarte
+- [ ] **CPV15** — Garry Rodrigues
+- [ ] **CPV16** — Jovane Cabral
+- [ ] **CPV17** — Ryan Mendes
+- [ ] **CPV18** — Dailon Livramento
+- [ ] **CPV19** — Willy Semedo
+- [ ] **CPV20** — Bebe
+
+## Saudi Arabia
+
+- [ ] **KSA1** — Emblem
+- [ ] **KSA2** — Nawaf Alaqidi
+- [ ] **KSA3** — Abdulrahman Al-Sanbi
+- [ ] **KSA4** — Saud Abdulhamid
+- [ ] **KSA5** — Nawaf Bouwashl
+- [ ] **KSA6** — Jihad Thakri
+- [ ] **KSA7** — Moteb Al-Harbi
+- [ ] **KSA8** — Hassan Altambakti
+- [ ] **KSA9** — Musab Aljuwayr
+- [ ] **KSA10** — Ziyad Aljohani
+- [ ] **KSA11** — Abdullah Alkhaibari
+- [ ] **KSA12** — Nasser Aldawsari
+- [ ] **KSA13** — Team Photo
+- [ ] **KSA14** — Saleh Abu Alshamat
+- [ ] **KSA15** — Marwan Alsahafi
+- [ ] **KSA16** — Salem Aldawsari
+- [ ] **KSA17** — Abdulrahman Al-Aboud
+- [ ] **KSA18** — Feras Akbrikan
+- [ ] **KSA19** — Saleh Alshehri
+- [ ] **KSA20** — Abdullah Al-Hamdan
+
+## Uruguay
+
+- [ ] **URU1** — Emblem
+- [ ] **URU2** — Sergio Rochet
+- [ ] **URU3** — Santiago Mele
+- [ ] **URU4** — Ronald Araujo
+- [ ] **URU5** — José María Giménez
+- [ ] **URU6** — Sebastian Caceres
+- [ ] **URU7** — Mathias Olivera
+- [ ] **URU8** — Guillermo Varela
+- [ ] **URU9** — Nahitan Nandez
+- [ ] **URU10** — Federico Valverde
+- [ ] **URU11** — Giorgian De Arrascaeta
+- [ ] **URU12** — Rodrigo Bentancur
+- [ ] **URU13** — Team Photo
+- [ ] **URU14** — Manuel Ugarte
+- [ ] **URU15** — Nicolás de la Cruz
+- [ ] **URU16** — Maxi Araujo
+- [ ] **URU17** — Darwin Núñez
+- [ ] **URU18** — Federico Viñas
+- [ ] **URU19** — Rodrigo Aguirre
+- [ ] **URU20** — Facundo Pellistri
+
+## France
+
+- [ ] **FRA1** — Emblem
+- [ ] **FRA2** — Mike Maignan
+- [ ] **FRA3** — Theo Hernandez
+- [ ] **FRA4** — William Saliba
+- [ ] **FRA5** — Jules Kounde
+- [ ] **FRA6** — Ibrahima Konate
+- [ ] **FRA7** — Dayot Upamecano
+- [ ] **FRA8** — Lucas Digne
+- [ ] **FRA9** — Aurélien Tchouaméni
+- [ ] **FRA10** — Eduardo Camavinga
+- [ ] **FRA11** — Manu Kone
+- [ ] **FRA12** — Adrien Rabiot
+- [ ] **FRA13** — Team Photo
+- [ ] **FRA14** — Michael Olise
+- [ ] **FRA15** — Ousmane Dembele
+- [ ] **FRA16** — Bradley Barcola
+- [ ] **FRA17** — Désiré Doué
+- [ ] **FRA18** — Kingsley Coman
+- [ ] **FRA19** — Hugo Ekitike
+- [ ] **FRA20** — Kylian Mbappe
+
+## Senegal
+
+- [ ] **SEN1** — Emblem
+- [ ] **SEN2** — Édouard Mendy
+- [ ] **SEN3** — Yehvann Diouf
+- [ ] **SEN4** — Moussa Niakhaté
+- [ ] **SEN5** — Abdoulaye Seck
+- [ ] **SEN6** — Ismail Jakobs
+- [ ] **SEN7** — El Hadji Malick Diouf
+- [ ] **SEN8** — Kalidou Koulibaly
+- [ ] **SEN9** — Idrissa Gana Gueye
+- [ ] **SEN10** — Pape Matar Sarr
+- [ ] **SEN11** — Pape Gueye
+- [ ] **SEN12** — Habib Diarra
+- [ ] **SEN13** — Team Photo
+- [ ] **SEN14** — Lamine Camara
+- [ ] **SEN15** — Sadio Mane
+- [ ] **SEN16** — Ismaïla Sarr
+- [ ] **SEN17** — Boulaye Dia
+- [ ] **SEN18** — Iliman Ndiaye
+- [ ] **SEN19** — Nicolas Jackson
+- [ ] **SEN20** — Krepin Diatta
+
+## Iraq
+
+- [ ] **IRQ1** — Emblem
+- [ ] **IRQ2** — Jalal Hassan
+- [ ] **IRQ3** — Rebin Sulaka
+- [ ] **IRQ4** — Hussein Ali
+- [ ] **IRQ5** — Akam Hashem
+- [ ] **IRQ6** — Merchas Doski
+- [ ] **IRQ7** — Zaid Tahseen
+- [ ] **IRQ8** — Manaf Younis
+- [ ] **IRQ9** — Zidane Iqbal
+- [ ] **IRQ10** — Amir Al-Ammari
+- [ ] **IRQ11** — Ibrahim Bavesh
+- [ ] **IRQ12** — Ali Jasim
+- [ ] **IRQ13** — Team Photo
+- [ ] **IRQ14** — Youssef Amyn
+- [ ] **IRQ15** — Aimar Sher
+- [ ] **IRQ16** — Marko Farji
+- [ ] **IRQ17** — Osama Rashid
+- [ ] **IRQ18** — Ali Al-Hamadi
+- [ ] **IRQ19** — Aymen Hussein
+- [ ] **IRQ20** — Mohanad Ali
+
+## Norway
+
+- [ ] **NOR1** — Emblem
+- [ ] **NOR2** — Orjan Nyland
+- [ ] **NOR3** — Julian Ryerson
+- [ ] **NOR4** — Leo Ostigård
+- [ ] **NOR5** — Kristoffer Vassbakk Ajer
+- [ ] **NOR6** — Marcus Holmgren Pedersen
+- [ ] **NOR7** — David Møller Wolfe
+- [ ] **NOR8** — Torbjørn Heggem
+- [ ] **NOR9** — Morten Thorsby
+- [ ] **NOR10** — Martin Ødegaard
+- [ ] **NOR11** — Sander Berge
+- [ ] **NOR12** — Andreas Schjelderup
+- [ ] **NOR13** — Team Photo
+- [ ] **NOR14** — Patrick Berg
+- [ ] **NOR15** — Erling Haaland
+- [ ] **NOR16** — Alexander Sørloth
+- [ ] **NOR17** — Aron Dønnum
+- [ ] **NOR18** — Jorgen Strand Larsen
+- [ ] **NOR19** — Antonio Nusa
+- [ ] **NOR20** — Oscar Bobb
+
+## Argentina
+
+- [ ] **ARG1** — Emblem
+- [ ] **ARG2** — Emiliano Martinez
+- [ ] **ARG3** — Nahuel Molina
+- [ ] **ARG4** — Cristian Romero
+- [ ] **ARG5** — Nicolas Otamendi
+- [ ] **ARG6** — Nicolas Tagliafico
+- [ ] **ARG7** — Leonardo Balerdi
+- [ ] **ARG8** — Enzo Fernandez
+- [ ] **ARG9** — Alexis Mac Allister
+- [ ] **ARG10** — Rodrigo De Paul
+- [ ] **ARG11** — Exequiel Palacios
+- [ ] **ARG12** — Leandro Paredes
+- [ ] **ARG13** — Team Photo
+- [ ] **ARG14** — Nico Paz
+- [ ] **ARG15** — Franco Mastantuono
+- [ ] **ARG16** — Nico Gonzalez
+- [ ] **ARG17** — Lionel Messi
+- [ ] **ARG18** — Lautaro Martinez
+- [ ] **ARG19** — Julian Alvarez
+- [ ] **ARG20** — Giuliano Simeone
+
+## Algeria
+
+- [ ] **ALG1** — Emblem
+- [ ] **ALG2** — Alexis Guendouz
+- [ ] **ALG3** — Ramy Bensebaini
+- [ ] **ALG4** — Youcef Atal
+- [ ] **ALG5** — Rayan Aït-Nouri
+- [ ] **ALG6** — Mohamed Amine Tougai
+- [ ] **ALG7** — Aïssa Mandi
+- [ ] **ALG8** — Ismael Bennacer
+- [ ] **ALG9** — Houssem Aouar
+- [ ] **ALG10** — Hicham Boudaoui
+- [ ] **ALG11** — Ramiz Zerrouki
+- [ ] **ALG12** — Nabil Bentaleb
+- [ ] **ALG13** — Team Photo
+- [ ] **ALG14** — Farés Chaibi
+- [ ] **ALG15** — Riyad Mahrez
+- [ ] **ALG16** — Said Benrahma
+- [ ] **ALG17** — Anis Hadj Moussa
+- [ ] **ALG18** — Amine Gouiri
+- [ ] **ALG19** — Baghdad Bounedjah
+- [ ] **ALG20** — Mohammed Amoura
+
+## Austria
+
+- [ ] **AUT1** — Emblem
+- [ ] **AUT2** — Alexander Schlager
+- [ ] **AUT3** — Patrick Pentz
+- [ ] **AUT4** — David Alaba
+- [ ] **AUT5** — Kevin Danso
+- [ ] **AUT6** — Philipp Lienhart
+- [ ] **AUT7** — Stefan Posch
+- [ ] **AUT8** — Phillipp Mwene
+- [ ] **AUT9** — Alexander Prass
+- [ ] **AUT10** — Xaver Schlager
+- [ ] **AUT11** — Marcel Sabitzer
+- [ ] **AUT12** — Konrad Laimer
+- [ ] **AUT13** — Team Photo
+- [ ] **AUT14** — Florian Grillitsch
+- [ ] **AUT15** — Nicolas Seiwald
+- [ ] **AUT16** — Romano Schmid
+- [ ] **AUT17** — Patrick Wimmer
+- [ ] **AUT18** — Christoph Baumgartner
+- [ ] **AUT19** — Michael Gregoritsch
+- [ ] **AUT20** — Marko Arnautović
+
+## Jordan
+
+- [ ] **JOR1** — Emblem
+- [ ] **JOR2** — Yazeed Abulaila
+- [ ] **JOR3** — Ihsan Haddad
+- [ ] **JOR4** — Mohammad Abu Hashish
+- [ ] **JOR5** — Yazan Al-Arab
+- [ ] **JOR6** — Abdallah Nasib
+- [ ] **JOR7** — Saleem Obaid
+- [ ] **JOR8** — Mohammad Abualnadi
+- [ ] **JOR9** — Ibrahim Saadeh
+- [ ] **JOR10** — Nizar Al-Rashdan
+- [ ] **JOR11** — Noor Al-Rawabdeh
+- [ ] **JOR12** — Mohannad Abu Taha
+- [ ] **JOR13** — Team Photo
+- [ ] **JOR14** — Amer Jamous
+- [ ] **JOR15** — Musa Al-Taamari
+- [ ] **JOR16** — Yazan Al-Naimat
+- [ ] **JOR17** — Mahmoud Al-Mardi
+- [ ] **JOR18** — Ali Olwan
+- [ ] **JOR19** — Mohammad Abu Zrayq
+- [ ] **JOR20** — Ibrahim Sabra
+
+## Portugal
+
+- [ ] **POR1** — Emblem
+- [ ] **POR2** — Diogo Costa
+- [ ] **POR3** — José Sá
+- [ ] **POR4** — Ruben Dias
+- [ ] **POR5** — João Cancelo
+- [ ] **POR6** — Diogo Dalot
+- [ ] **POR7** — Nuno Mendes
+- [ ] **POR8** — Gonçalo Inácio
+- [ ] **POR9** — Bernardo Silva
+- [ ] **POR10** — Bruno Fernandes
+- [ ] **POR11** — Ruben Neves
+- [ ] **POR12** — Vitinha
+- [ ] **POR13** — Team Photo
+- [ ] **POR14** — João Neves
+- [ ] **POR15** — Cristiano Ronaldo
+- [ ] **POR16** — Francisco Trincao
+- [ ] **POR17** — João Felix
+- [ ] **POR18** — Gonçalo Ramos
+- [ ] **POR19** — Pedro Neto
+- [ ] **POR20** — Rafael Leão
+
+## Congo DR
+
+- [ ] **COD1** — Emblem
+- [ ] **COD2** — Lionel Mpasi-Nzau
+- [ ] **COD3** — Aaron Wan-Bissaka
+- [ ] **COD4** — Axel Tuanzebe
+- [ ] **COD5** — Arthur Masuaku
+- [ ] **COD6** — Chancel Mbemba
+- [ ] **COD7** — Joris Kayembe
+- [ ] **COD8** — Charles Pickel
+- [ ] **COD9** — Ngal'ayel Mukau
+- [ ] **COD10** — Edo Kayembe
+- [ ] **COD11** — Samuel Moutoussamy
+- [ ] **COD12** — Noah Sadiki
+- [ ] **COD13** — Team Photo
+- [ ] **COD14** — Théo Bongonda
+- [ ] **COD15** — Meschak Elia
+- [ ] **COD16** — Yoane Wissa
+- [ ] **COD17** — Brian Cipenga
+- [ ] **COD18** — Fiston Mayele
+- [ ] **COD19** — Cédric Bakambu
+- [ ] **COD20** — Nathanaël Mbuku
+
+## Uzbekistan
+
+- [ ] **UZB1** — Emblem
+- [ ] **UZB2** — Utkir Yusupov
+- [ ] **UZB3** — Farrukh Savfiev
+- [ ] **UZB4** — Sherzod Nasrullaev
+- [ ] **UZB5** — Umar Eshmurodov
+- [ ] **UZB6** — Husniddin Aliqulov
+- [ ] **UZB7** — Rustamjon Ashurmatov
+- [ ] **UZB8** — Khojiakbar Alijonov
+- [ ] **UZB9** — Abdukodir Khusanov
+- [ ] **UZB10** — Odiljon Hamrobekov
+- [ ] **UZB11** — Otabek Shukurov
+- [ ] **UZB12** — Jamshid Iskanderov
+- [ ] **UZB13** — Team Photo
+- [ ] **UZB14** — Azizbek Turgunboev
+- [ ] **UZB15** — Khojimat Erkinov
+- [ ] **UZB16** — Eldor Shomurodov
+- [ ] **UZB17** — Oston Urunov
+- [ ] **UZB18** — Jaloliddin Masharipov
+- [ ] **UZB19** — Igor Sergeev
+- [ ] **UZB20** — Abbosbek Fayzullaev
+
+## Colombia
+
+- [ ] **COL1** — Emblem
+- [ ] **COL2** — Camilo Vargas
+- [ ] **COL3** — David Ospina
+- [ ] **COL4** — Dávinson Sánchez
+- [ ] **COL5** — Yerry Mina
+- [ ] **COL6** — Daniel Munoz
+- [ ] **COL7** — Johan Mojica
+- [ ] **COL8** — Jhon Lucumí
+- [ ] **COL9** — Santiago Arias
+- [ ] **COL10** — Jefferson Lerma
+- [ ] **COL11** — Kevin Castaño
+- [ ] **COL12** — Richard Rios
+- [ ] **COL13** — Team Photo
+- [ ] **COL14** — James Rodriguez
+- [ ] **COL15** — Juan Fernando Quintero
+- [ ] **COL16** — Jorge Carrascal
+- [ ] **COL17** — Jhon Arias
+- [ ] **COL18** — Jhon Cordova
+- [ ] **COL19** — Luis Suarez
+- [ ] **COL20** — Luis Diaz
+
+## England
+
+- [ ] **ENG1** — Emblem
+- [ ] **ENG2** — Jordan Pickford
+- [ ] **ENG3** — John Stones
+- [ ] **ENG4** — Marc Guéhi
+- [ ] **ENG5** — Ezri Konsa
+- [ ] **ENG6** — Trent Alexander-Arnold
+- [ ] **ENG7** — Reece James
+- [ ] **ENG8** — Dan Burn
+- [ ] **ENG9** — Jordan Henderson
+- [ ] **ENG10** — Declan Rice
+- [ ] **ENG11** — Jude Bellingham
+- [ ] **ENG12** — Cole Palmer
+- [ ] **ENG13** — Team Photo
+- [ ] **ENG14** — Morgan Rogers
+- [ ] **ENG15** — Anthony Gordon
+- [ ] **ENG16** — Phil Foden
+- [ ] **ENG17** — Bukayo Saka
+- [ ] **ENG18** — Harry Kane
+- [ ] **ENG19** — Marcus Rashford
+- [ ] **ENG20** — Ollie Watkins
+
+## Croatia
+
+- [ ] **CRO1** — Emblem
+- [ ] **CRO2** — Dominik Livaković
+- [ ] **CRO3** — Duje Caleta-Car
+- [ ] **CRO4** — Josko Gvardiol
+- [ ] **CRO5** — Josip Stanišić
+- [ ] **CRO6** — Luka Vušković
+- [ ] **CRO7** — Josip Sutalo
+- [ ] **CRO8** — Kristijan Jakic
+- [ ] **CRO9** — Luka Modrić
+- [ ] **CRO10** — Mateo Kovacic
+- [ ] **CRO11** — Martin Baturina
+- [ ] **CRO12** — Lovro Majer
+- [ ] **CRO13** — Team Photo
+- [ ] **CRO14** — Mario Pasalic
+- [ ] **CRO15** — Petar Sucic
+- [ ] **CRO16** — Ivan Perišić
+- [ ] **CRO17** — Marco Pasalic
+- [ ] **CRO18** — Ante Budimir
+- [ ] **CRO19** — Andrej Kramarić
+- [ ] **CRO20** — Franjo Ivanovic
+
+## Ghana
+
+- [ ] **GHA1** — Emblem
+- [ ] **GHA2** — Lawrence Ati Zigi
+- [ ] **GHA3** — Tariq Lamptey
+- [ ] **GHA4** — Mohammed Salisu
+- [ ] **GHA5** — Alidu Seidu
+- [ ] **GHA6** — Alexander Djiku
+- [ ] **GHA7** — Gideon Mensah
+- [ ] **GHA8** — Caleb Yirenkyi
+- [ ] **GHA9** — Abdul Issahaku Fatawu
+- [ ] **GHA10** — Thomas Partey
+- [ ] **GHA11** — Salis Abdul Samed
+- [ ] **GHA12** — Kamaldeen Sulemana
+- [ ] **GHA13** — Team Photo
+- [ ] **GHA14** — Mohammed Kudus
+- [ ] **GHA15** — Inaki Williams
+- [ ] **GHA16** — Jordan Ayew
+- [ ] **GHA17** — André Ayew
+- [ ] **GHA18** — Joseph Paintsil
+- [ ] **GHA19** — Osman Bukari
+- [ ] **GHA20** — Antoine Semenyo
+
+## Panama
+
+- [ ] **PAN1** — Emblem
+- [ ] **PAN2** — Orlando Mosquera
+- [ ] **PAN3** — Luis Mejia
+- [ ] **PAN4** — Fidel Escobar
+- [ ] **PAN5** — Andres Andrade
+- [ ] **PAN6** — Michael Amir Murillo
+- [ ] **PAN7** — Eric Davis
+- [ ] **PAN8** — Jose Cordoba
+- [ ] **PAN9** — Cesar Blackman
+- [ ] **PAN10** — Cristian Martinez
+- [ ] **PAN11** — Aníbal Godoy
+- [ ] **PAN12** — Adalberto Carrasquilla
+- [ ] **PAN13** — Team Photo
+- [ ] **PAN14** — Édgar Bárcenas
+- [ ] **PAN15** — Carlos Harvey
+- [ ] **PAN16** — Ismael Díaz
+- [ ] **PAN17** — Jose Fajardo
+- [ ] **PAN18** — Cecilio Waterman
+- [ ] **PAN19** — Jose Luiz Rodriguez
+- [ ] **PAN20** — Alberto Quintero
+
+---
+
+**Checklist count:** 980 base stickers.
 `;
