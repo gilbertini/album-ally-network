@@ -1,4 +1,5 @@
 import type { Album, Sticker, StickerCategory } from "@/lib/types";
+import { flagForCode } from "@/lib/checklist/flags";
 
 /**
  * Album-agnostic checklist importer.
@@ -8,8 +9,8 @@ import type { Album, Sticker, StickerCategory } from "@/lib/types";
  *
  *   ## Argentina 🇦🇷 (ARG)
  *   - ARG1 — Team Emblem
- *   - ARG2 — Team Photo
- *   - ARG17 — Lionel Messi
+ *   - [ ] **ARG2** — Team Photo
+ *   - [x] ARG17 — Lionel Messi
  *
  *   ## FIFA World Cup
  *   - WC1 — FIFA World Cup Trophy
@@ -24,9 +25,11 @@ export interface ParsedChecklist extends Album {
 
 const HEADING = /^#{1,6}\s+(.*)$/;
 const ROW =
-  /^(?:[-*+]\s+|\|\s*|\d+\.\s+)?([A-Z]{2,5}\d{1,4}|\d{1,4})\s*(?:—|–|-|:|\||\t)\s*(.+?)\s*\|?\s*$/;
+  /^(?:[-*+]\s+)?(?:\[[ xX]?\]\s*)?(?:\|\s*|\d+\.\s+)?\*{0,2}([A-Z]{2,5}\d{1,4}|\d{1,4})\*{0,2}\s*(?:—|–|-|:|\||\t)\s*(.+?)\s*\|?\s*$/;
 const FLAG_IN_HEADING = /\p{Regional_Indicator}{2}/u;
 const CODE_IN_HEADING = /\(([A-Z]{2,5})\)/;
+/** Blockquotes, horizontal rules and metadata lines are never stickers. */
+const IGNORED_LINE = /^(?:>|-{3,}$|\*{3,}$|_{3,}$)/;
 
 function categorize(name: string, section: string): StickerCategory {
   const n = name.toLowerCase();
@@ -67,6 +70,7 @@ export function parseChecklist(
   for (const rawLine of markdown.split(/\r?\n/)) {
     const line = rawLine.trim();
     if (!line) continue;
+    if (IGNORED_LINE.test(line)) continue;
 
     const heading = line.match(HEADING);
     if (heading?.[1]) {
@@ -90,13 +94,14 @@ export function parseChecklist(
     }
     seen.add(code);
 
+    const countryCode = codeHint || code.replace(/\d+$/, "");
     stickers.push({
       id: `${options.album}:${code}`.toLowerCase().replace(/\s+/g, "-"),
       code,
       name,
       country: section,
-      countryCode: codeHint || code.replace(/\d+$/, ""),
-      flag,
+      countryCode,
+      flag: flag || flagForCode(countryCode),
       category: categorize(name, section),
       album: options.album,
       number: stickers.length + 1,
