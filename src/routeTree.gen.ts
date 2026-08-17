@@ -10,33 +10,219 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AdminRouteImport } from './routes/admin'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as MatchesRouteImport } from './routes/matches'
+import { Route as NotificationsRouteImport } from './routes/notifications'
+import { Route as OnboardingRouteImport } from './routes/onboarding'
+import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as SearchRouteImport } from './routes/search'
+import { Route as WalletRouteImport } from './routes/wallet'
+import { Route as AlbumIndexRouteImport } from './routes/album.index'
+import { Route as AlbumCountryRouteImport } from './routes/album.$country'
+import { Route as BuildTradeIdRouteImport } from './routes/build-trade.$id'
+import { Route as CollectorIdRouteImport } from './routes/collector.$id'
+import { Route as TradesIndexRouteImport } from './routes/trades.index'
+import { Route as TradesTradeIdRouteImport } from './routes/trades.$tradeId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminRoute = AdminRouteImport.update({
+  id: '/admin',
+  path: '/admin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MatchesRoute = MatchesRouteImport.update({
+  id: '/matches',
+  path: '/matches',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NotificationsRoute = NotificationsRouteImport.update({
+  id: '/notifications',
+  path: '/notifications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OnboardingRoute = OnboardingRouteImport.update({
+  id: '/onboarding',
+  path: '/onboarding',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SearchRoute = SearchRouteImport.update({
+  id: '/search',
+  path: '/search',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WalletRoute = WalletRouteImport.update({
+  id: '/wallet',
+  path: '/wallet',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AlbumIndexRoute = AlbumIndexRouteImport.update({
+  id: '/album/',
+  path: '/album/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AlbumCountryRoute = AlbumCountryRouteImport.update({
+  id: '/album/$country',
+  path: '/album/$country',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BuildTradeIdRoute = BuildTradeIdRouteImport.update({
+  id: '/build-trade/$id',
+  path: '/build-trade/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CollectorIdRoute = CollectorIdRouteImport.update({
+  id: '/collector/$id',
+  path: '/collector/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TradesIndexRoute = TradesIndexRouteImport.update({
+  id: '/trades/',
+  path: '/trades/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TradesTradeIdRoute = TradesTradeIdRouteImport.update({
+  id: '/trades/$tradeId',
+  path: '/trades/$tradeId',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
+  '/dashboard': typeof DashboardRoute
+  '/matches': typeof MatchesRoute
+  '/notifications': typeof NotificationsRoute
+  '/onboarding': typeof OnboardingRoute
+  '/profile': typeof ProfileRoute
+  '/search': typeof SearchRoute
+  '/wallet': typeof WalletRoute
+  '/album/$country': typeof AlbumCountryRoute
+  '/build-trade/$id': typeof BuildTradeIdRoute
+  '/collector/$id': typeof CollectorIdRoute
+  '/trades/$tradeId': typeof TradesTradeIdRoute
+  '/album/': typeof AlbumIndexRoute
+  '/trades/': typeof TradesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
+  '/dashboard': typeof DashboardRoute
+  '/matches': typeof MatchesRoute
+  '/notifications': typeof NotificationsRoute
+  '/onboarding': typeof OnboardingRoute
+  '/profile': typeof ProfileRoute
+  '/search': typeof SearchRoute
+  '/wallet': typeof WalletRoute
+  '/album/$country': typeof AlbumCountryRoute
+  '/build-trade/$id': typeof BuildTradeIdRoute
+  '/collector/$id': typeof CollectorIdRoute
+  '/trades/$tradeId': typeof TradesTradeIdRoute
+  '/album': typeof AlbumIndexRoute
+  '/trades': typeof TradesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/admin': typeof AdminRoute
+  '/dashboard': typeof DashboardRoute
+  '/matches': typeof MatchesRoute
+  '/notifications': typeof NotificationsRoute
+  '/onboarding': typeof OnboardingRoute
+  '/profile': typeof ProfileRoute
+  '/search': typeof SearchRoute
+  '/wallet': typeof WalletRoute
+  '/album/$country': typeof AlbumCountryRoute
+  '/build-trade/$id': typeof BuildTradeIdRoute
+  '/collector/$id': typeof CollectorIdRoute
+  '/trades/$tradeId': typeof TradesTradeIdRoute
+  '/album/': typeof AlbumIndexRoute
+  '/trades/': typeof TradesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/admin'
+    | '/dashboard'
+    | '/matches'
+    | '/notifications'
+    | '/onboarding'
+    | '/profile'
+    | '/search'
+    | '/wallet'
+    | '/album/$country'
+    | '/build-trade/$id'
+    | '/collector/$id'
+    | '/trades/$tradeId'
+    | '/album/'
+    | '/trades/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/admin'
+    | '/dashboard'
+    | '/matches'
+    | '/notifications'
+    | '/onboarding'
+    | '/profile'
+    | '/search'
+    | '/wallet'
+    | '/album/$country'
+    | '/build-trade/$id'
+    | '/collector/$id'
+    | '/trades/$tradeId'
+    | '/album'
+    | '/trades'
+  id:
+    | '__root__'
+    | '/'
+    | '/admin'
+    | '/dashboard'
+    | '/matches'
+    | '/notifications'
+    | '/onboarding'
+    | '/profile'
+    | '/search'
+    | '/wallet'
+    | '/album/$country'
+    | '/build-trade/$id'
+    | '/collector/$id'
+    | '/trades/$tradeId'
+    | '/album/'
+    | '/trades/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AdminRoute: typeof AdminRoute
+  DashboardRoute: typeof DashboardRoute
+  MatchesRoute: typeof MatchesRoute
+  NotificationsRoute: typeof NotificationsRoute
+  OnboardingRoute: typeof OnboardingRoute
+  ProfileRoute: typeof ProfileRoute
+  SearchRoute: typeof SearchRoute
+  WalletRoute: typeof WalletRoute
+  AlbumCountryRoute: typeof AlbumCountryRoute
+  BuildTradeIdRoute: typeof BuildTradeIdRoute
+  CollectorIdRoute: typeof CollectorIdRoute
+  TradesTradeIdRoute: typeof TradesTradeIdRoute
+  AlbumIndexRoute: typeof AlbumIndexRoute
+  TradesIndexRoute: typeof TradesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +234,123 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin': {
+      id: '/admin'
+      path: '/admin'
+      fullPath: '/admin'
+      preLoaderRoute: typeof AdminRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/matches': {
+      id: '/matches'
+      path: '/matches'
+      fullPath: '/matches'
+      preLoaderRoute: typeof MatchesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/notifications': {
+      id: '/notifications'
+      path: '/notifications'
+      fullPath: '/notifications'
+      preLoaderRoute: typeof NotificationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/onboarding': {
+      id: '/onboarding'
+      path: '/onboarding'
+      fullPath: '/onboarding'
+      preLoaderRoute: typeof OnboardingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/search': {
+      id: '/search'
+      path: '/search'
+      fullPath: '/search'
+      preLoaderRoute: typeof SearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wallet': {
+      id: '/wallet'
+      path: '/wallet'
+      fullPath: '/wallet'
+      preLoaderRoute: typeof WalletRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/album/': {
+      id: '/album/'
+      path: '/album'
+      fullPath: '/album/'
+      preLoaderRoute: typeof AlbumIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/album/$country': {
+      id: '/album/$country'
+      path: '/album/$country'
+      fullPath: '/album/$country'
+      preLoaderRoute: typeof AlbumCountryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/build-trade/$id': {
+      id: '/build-trade/$id'
+      path: '/build-trade/$id'
+      fullPath: '/build-trade/$id'
+      preLoaderRoute: typeof BuildTradeIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/collector/$id': {
+      id: '/collector/$id'
+      path: '/collector/$id'
+      fullPath: '/collector/$id'
+      preLoaderRoute: typeof CollectorIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trades/': {
+      id: '/trades/'
+      path: '/trades'
+      fullPath: '/trades/'
+      preLoaderRoute: typeof TradesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trades/$tradeId': {
+      id: '/trades/$tradeId'
+      path: '/trades/$tradeId'
+      fullPath: '/trades/$tradeId'
+      preLoaderRoute: typeof TradesTradeIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AdminRoute: AdminRoute,
+  DashboardRoute: DashboardRoute,
+  MatchesRoute: MatchesRoute,
+  NotificationsRoute: NotificationsRoute,
+  OnboardingRoute: OnboardingRoute,
+  ProfileRoute: ProfileRoute,
+  SearchRoute: SearchRoute,
+  WalletRoute: WalletRoute,
+  AlbumCountryRoute: AlbumCountryRoute,
+  BuildTradeIdRoute: BuildTradeIdRoute,
+  CollectorIdRoute: CollectorIdRoute,
+  TradesTradeIdRoute: TradesTradeIdRoute,
+  AlbumIndexRoute: AlbumIndexRoute,
+  TradesIndexRoute: TradesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
