@@ -6,11 +6,11 @@ export const ALBUM_NAME = "Panini FIFA World Cup 2026";
 export const EXPECTED_BASE_COUNT = 980;
 
 /**
- * Flip to true once the authoritative 980-sticker checklist is in
- * src/data/checklist-2026.ts. While false we skip the hard count validation so
- * the app runs against the placeholder subset.
+ * The authoritative 980-sticker checklist is in src/data/checklist-2026.ts, so
+ * the hard count validation runs. Set to false only while staging a partial
+ * checklist for a new album.
  */
-export const CHECKLIST_IS_COMPLETE = false;
+export const CHECKLIST_IS_COMPLETE = true;
 
 export const album = parseChecklist(WORLD_CUP_2026_CHECKLIST_MD, {
   album: ALBUM_NAME,
@@ -19,6 +19,7 @@ export const album = parseChecklist(WORLD_CUP_2026_CHECKLIST_MD, {
 
 export const stickers: Sticker[] = album.stickers;
 export const stickerById = new Map(stickers.map((s) => [s.id, s]));
+export const importErrors: string[] = album.errors;
 
 export interface CountrySection {
   name: string;
