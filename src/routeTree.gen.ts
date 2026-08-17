@@ -12,6 +12,8 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as MatchesRouteImport } from './routes/matches'
+import { Route as ProfileRouteImport } from './routes/profile'
+import { Route as WalletRouteImport } from './routes/wallet'
 import { Route as AlbumIndexRouteImport } from './routes/album.index'
 import { Route as AlbumCountryRouteImport } from './routes/album.$country'
 import { Route as BuildTradeIdRouteImport } from './routes/build-trade.$id'
@@ -31,6 +33,16 @@ const DashboardRoute = DashboardRouteImport.update({
 const MatchesRoute = MatchesRouteImport.update({
   id: '/matches',
   path: '/matches',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfileRoute = ProfileRouteImport.update({
+  id: '/profile',
+  path: '/profile',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WalletRoute = WalletRouteImport.update({
+  id: '/wallet',
+  path: '/wallet',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AlbumIndexRoute = AlbumIndexRouteImport.update({
@@ -63,6 +75,8 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRoute
   '/matches': typeof MatchesRoute
+  '/profile': typeof ProfileRoute
+  '/wallet': typeof WalletRoute
   '/album/$country': typeof AlbumCountryRoute
   '/build-trade/$id': typeof BuildTradeIdRoute
   '/trades/$tradeId': typeof TradesTradeIdRoute
@@ -73,6 +87,8 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRoute
   '/matches': typeof MatchesRoute
+  '/profile': typeof ProfileRoute
+  '/wallet': typeof WalletRoute
   '/album/$country': typeof AlbumCountryRoute
   '/build-trade/$id': typeof BuildTradeIdRoute
   '/trades/$tradeId': typeof TradesTradeIdRoute
@@ -84,6 +100,8 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRoute
   '/matches': typeof MatchesRoute
+  '/profile': typeof ProfileRoute
+  '/wallet': typeof WalletRoute
   '/album/$country': typeof AlbumCountryRoute
   '/build-trade/$id': typeof BuildTradeIdRoute
   '/trades/$tradeId': typeof TradesTradeIdRoute
@@ -96,6 +114,8 @@ export interface FileRouteTypes {
     | '/'
     | '/dashboard'
     | '/matches'
+    | '/profile'
+    | '/wallet'
     | '/album/$country'
     | '/build-trade/$id'
     | '/trades/$tradeId'
@@ -106,6 +126,8 @@ export interface FileRouteTypes {
     | '/'
     | '/dashboard'
     | '/matches'
+    | '/profile'
+    | '/wallet'
     | '/album/$country'
     | '/build-trade/$id'
     | '/trades/$tradeId'
@@ -116,6 +138,8 @@ export interface FileRouteTypes {
     | '/'
     | '/dashboard'
     | '/matches'
+    | '/profile'
+    | '/wallet'
     | '/album/$country'
     | '/build-trade/$id'
     | '/trades/$tradeId'
@@ -127,6 +151,8 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DashboardRoute: typeof DashboardRoute
   MatchesRoute: typeof MatchesRoute
+  ProfileRoute: typeof ProfileRoute
+  WalletRoute: typeof WalletRoute
   AlbumCountryRoute: typeof AlbumCountryRoute
   BuildTradeIdRoute: typeof BuildTradeIdRoute
   TradesTradeIdRoute: typeof TradesTradeIdRoute
@@ -155,6 +181,20 @@ declare module '@tanstack/react-router' {
       path: '/matches'
       fullPath: '/matches'
       preLoaderRoute: typeof MatchesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profile': {
+      id: '/profile'
+      path: '/profile'
+      fullPath: '/profile'
+      preLoaderRoute: typeof ProfileRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wallet': {
+      id: '/wallet'
+      path: '/wallet'
+      fullPath: '/wallet'
+      preLoaderRoute: typeof WalletRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/album/': {
@@ -199,6 +239,8 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DashboardRoute: DashboardRoute,
   MatchesRoute: MatchesRoute,
+  ProfileRoute: ProfileRoute,
+  WalletRoute: WalletRoute,
   AlbumCountryRoute: AlbumCountryRoute,
   BuildTradeIdRoute: BuildTradeIdRoute,
   TradesTradeIdRoute: TradesTradeIdRoute,
