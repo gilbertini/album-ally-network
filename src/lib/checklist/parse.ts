@@ -33,6 +33,9 @@ const IGNORED_LINE = /^(?:>|-{3,}$|\*{3,}$|_{3,}$)/;
 
 function categorize(name: string, section: string): StickerCategory {
   const n = name.toLowerCase();
+  // Section wins for non-team sections: "Official Emblem" inside a
+  // tournament/publisher section is a world-cup sticker, not a team emblem.
+  if (/world cup|trophy|special|intro|we are|panini/i.test(section)) return "world_cup";
   if (/emblem|badge|crest|logo/.test(n)) return "emblem";
   if (/team photo|squad photo|team picture/.test(n)) return "team_photo";
   if (/world cup|trophy|tournament|host cit|mascot|ball|stadium|poster/.test(n)) {
