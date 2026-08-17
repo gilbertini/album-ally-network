@@ -19,7 +19,7 @@ export const Route = createFileRoute("/search")({
       { property: "og:description", content: "Find who has ARG17 right now." },
     ],
   }),
-  component: SearchPage;
+  component: SearchPage,
 });
 
 function SearchPage() {
