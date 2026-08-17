@@ -12,6 +12,8 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as MatchesRouteImport } from './routes/matches'
+import { Route as NotificationsRouteImport } from './routes/notifications'
+import { Route as OnboardingRouteImport } from './routes/onboarding'
 import { Route as ProfileRouteImport } from './routes/profile'
 import { Route as WalletRouteImport } from './routes/wallet'
 import { Route as AlbumIndexRouteImport } from './routes/album.index'
@@ -33,6 +35,16 @@ const DashboardRoute = DashboardRouteImport.update({
 const MatchesRoute = MatchesRouteImport.update({
   id: '/matches',
   path: '/matches',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NotificationsRoute = NotificationsRouteImport.update({
+  id: '/notifications',
+  path: '/notifications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OnboardingRoute = OnboardingRouteImport.update({
+  id: '/onboarding',
+  path: '/onboarding',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProfileRoute = ProfileRouteImport.update({
@@ -75,6 +87,8 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRoute
   '/matches': typeof MatchesRoute
+  '/notifications': typeof NotificationsRoute
+  '/onboarding': typeof OnboardingRoute
   '/profile': typeof ProfileRoute
   '/wallet': typeof WalletRoute
   '/album/$country': typeof AlbumCountryRoute
@@ -87,6 +101,8 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRoute
   '/matches': typeof MatchesRoute
+  '/notifications': typeof NotificationsRoute
+  '/onboarding': typeof OnboardingRoute
   '/profile': typeof ProfileRoute
   '/wallet': typeof WalletRoute
   '/album/$country': typeof AlbumCountryRoute
@@ -100,6 +116,8 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/dashboard': typeof DashboardRoute
   '/matches': typeof MatchesRoute
+  '/notifications': typeof NotificationsRoute
+  '/onboarding': typeof OnboardingRoute
   '/profile': typeof ProfileRoute
   '/wallet': typeof WalletRoute
   '/album/$country': typeof AlbumCountryRoute
@@ -114,6 +132,8 @@ export interface FileRouteTypes {
     | '/'
     | '/dashboard'
     | '/matches'
+    | '/notifications'
+    | '/onboarding'
     | '/profile'
     | '/wallet'
     | '/album/$country'
@@ -126,6 +146,8 @@ export interface FileRouteTypes {
     | '/'
     | '/dashboard'
     | '/matches'
+    | '/notifications'
+    | '/onboarding'
     | '/profile'
     | '/wallet'
     | '/album/$country'
@@ -138,6 +160,8 @@ export interface FileRouteTypes {
     | '/'
     | '/dashboard'
     | '/matches'
+    | '/notifications'
+    | '/onboarding'
     | '/profile'
     | '/wallet'
     | '/album/$country'
@@ -151,6 +175,8 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DashboardRoute: typeof DashboardRoute
   MatchesRoute: typeof MatchesRoute
+  NotificationsRoute: typeof NotificationsRoute
+  OnboardingRoute: typeof OnboardingRoute
   ProfileRoute: typeof ProfileRoute
   WalletRoute: typeof WalletRoute
   AlbumCountryRoute: typeof AlbumCountryRoute
@@ -181,6 +207,20 @@ declare module '@tanstack/react-router' {
       path: '/matches'
       fullPath: '/matches'
       preLoaderRoute: typeof MatchesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/notifications': {
+      id: '/notifications'
+      path: '/notifications'
+      fullPath: '/notifications'
+      preLoaderRoute: typeof NotificationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/onboarding': {
+      id: '/onboarding'
+      path: '/onboarding'
+      fullPath: '/onboarding'
+      preLoaderRoute: typeof OnboardingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/profile': {
@@ -239,6 +279,8 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DashboardRoute: DashboardRoute,
   MatchesRoute: MatchesRoute,
+  NotificationsRoute: NotificationsRoute,
+  OnboardingRoute: OnboardingRoute,
   ProfileRoute: ProfileRoute,
   WalletRoute: WalletRoute,
   AlbumCountryRoute: AlbumCountryRoute,
