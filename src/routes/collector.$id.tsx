@@ -5,6 +5,7 @@ import { toast } from "sonner";
 import { AppShell } from "@/components/app/AppShell";
 import { StickerBadge } from "@/components/app/StickerTile";
 import { stickerById } from "@/lib/album";
+import { levelClass } from "@/lib/levels";
 import { collectorById, useStore } from "@/mocks/store";
 
 export const Route = createFileRoute("/collector/$id")({
@@ -61,8 +62,13 @@ function CollectorProfile() {
               {collector.rating.toFixed(1)} · {collector.completedTrades} trades ·{" "}
               {collector.successRate}% successful
             </p>
-            <p className="text-[11px] text-muted-foreground">
-              {collector.level} · member since {collector.memberSince}
+            <p className="mt-1 flex flex-wrap items-center gap-2 text-[11px] text-muted-foreground">
+              <span
+                className={`inline-flex rounded-full px-2 py-0.5 font-bold ${levelClass(collector.level)}`}
+              >
+                {collector.level}
+              </span>
+              member since {collector.memberSince}
             </p>
           </div>
         </div>

@@ -67,95 +67,124 @@
   --color-have-foreground: var(--have-foreground);
   --color-dupe: var(--dupe);
   --color-dupe-foreground: var(--dupe-foreground);
+  --color-navy: var(--navy);
+  --color-navy-foreground: var(--navy-foreground);
+  --color-violet: var(--violet);
+  --color-violet-foreground: var(--violet-foreground);
+  --color-mint: var(--mint);
+  --color-mint-foreground: var(--mint-foreground);
+
   --shadow-card: var(--shadow-card);
   --shadow-lift: var(--shadow-lift);
 }
 
 :root {
   --radius: 1rem;
+  /* Official FIFA World Cup 2026 palette. */
   --background: oklch(1 0 0);
-  --foreground: oklch(0.18 0.014 264);
+  --foreground: oklch(0.2 0.06 270);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.014 264);
+  --card-foreground: oklch(0.2 0.06 270);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.014 264);
-  --primary: oklch(0.472 0.229 266.5);
+  --popover-foreground: oklch(0.2 0.06 270);
+  /* Electric blue #304FFF */
+  --primary: oklch(0.533 0.259 267.6);
   --primary-foreground: oklch(0.99 0.002 250);
-  --primary-glow: oklch(0.62 0.19 262);
-  --secondary: oklch(0.965 0.011 260);
-  --secondary-foreground: oklch(0.28 0.06 266);
-  --muted: oklch(0.966 0.008 260);
-  --muted-foreground: oklch(0.53 0.03 262);
-  --accent: oklch(0.664 0.205 20.5);
+  --primary-glow: oklch(0.658 0.169 248.8);
+  /* Deep navy #1A247D */
+  --navy: oklch(0.321 0.148 270.1);
+  --navy-foreground: oklch(0.99 0.002 250);
+  /* Violet #6101EB */
+  --violet: oklch(0.477 0.276 286.6);
+  --violet-foreground: oklch(0.99 0.002 290);
+  /* Mint #63FFD8 */
+  --mint: oklch(0.907 0.143 173.4);
+  --mint-foreground: oklch(0.28 0.07 190);
+  --secondary: oklch(0.963 0.016 268);
+  --secondary-foreground: oklch(0.321 0.148 270.1);
+  --muted: oklch(0.965 0.012 268);
+  --muted-foreground: oklch(0.52 0.05 268);
+  /* Magenta #E81F63 */
+  --accent: oklch(0.605 0.228 9.6);
   --accent-foreground: oklch(0.99 0.002 20);
-  --destructive: oklch(0.577 0.23 27.325);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.918 0.012 258);
-  --input: oklch(0.918 0.012 258);
-  --ring: oklch(0.472 0.229 266.5);
-  --need: oklch(0.664 0.205 20.5);
+  --destructive: oklch(0.55 0.226 29.2);
+  --destructive-foreground: oklch(0.99 0.002 20);
+  --border: oklch(0.915 0.016 268);
+  --input: oklch(0.915 0.016 268);
+  --ring: oklch(0.533 0.259 267.6);
+  /* NEED = magenta, HAVE = green #00C752, DUPLICATE = lime #B1EB00 */
+  --need: oklch(0.605 0.228 9.6);
   --need-foreground: oklch(0.99 0.002 20);
-  --have: oklch(0.58 0.14 155);
-  --have-foreground: oklch(0.99 0.002 155);
-  --dupe: oklch(0.75 0.16 78);
-  --dupe-foreground: oklch(0.2 0.05 78);
-  --shadow-card: 0 1px 2px oklch(0.18 0.014 264 / 6%), 0 8px 24px -16px oklch(0.18 0.014 264 / 18%);
-  --shadow-lift: 0 12px 32px -12px oklch(0.472 0.229 266.5 / 28%);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
-  --sidebar-border: oklch(0.929 0.013 255.508);
-  --sidebar-ring: oklch(0.704 0.04 256.788);
+  --have: oklch(0.63 0.19 148.3);
+  --have-foreground: oklch(0.99 0.002 150);
+  --dupe: oklch(0.868 0.22 125.6);
+  --dupe-foreground: oklch(0.28 0.09 128);
+  --shadow-card: 0 1px 2px oklch(0.321 0.148 270.1 / 7%), 0 8px 24px -16px oklch(0.321 0.148 270.1 / 22%);
+  --shadow-lift: 0 12px 32px -12px oklch(0.533 0.259 267.6 / 32%);
+  --chart-1: oklch(0.533 0.259 267.6);
+  --chart-2: oklch(0.605 0.228 9.6);
+  --chart-3: oklch(0.724 0.208 148.3);
+  --chart-4: oklch(0.868 0.22 125.6);
+  --chart-5: oklch(0.477 0.276 286.6);
+
+  --sidebar: oklch(0.985 0.006 268);
+  --sidebar-foreground: oklch(0.2 0.06 270);
+  --sidebar-primary: oklch(0.533 0.259 267.6);
+  --sidebar-primary-foreground: oklch(0.99 0.002 250);
+  --sidebar-accent: oklch(0.963 0.016 268);
+  --sidebar-accent-foreground: oklch(0.321 0.148 270.1);
+  --sidebar-border: oklch(0.915 0.016 268);
+  --sidebar-ring: oklch(0.533 0.259 267.6);
+
 }
 
 .dark {
-  --background: oklch(0.148 0.02 264);
-  --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.198 0.024 264);
-  --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.198 0.024 264);
-  --popover-foreground: oklch(0.984 0.003 247.858);
-  --primary: oklch(0.62 0.19 262);
+  --background: oklch(0.17 0.055 270);
+  --foreground: oklch(0.985 0.004 250);
+  --card: oklch(0.225 0.07 270);
+  --card-foreground: oklch(0.985 0.004 250);
+  --popover: oklch(0.225 0.07 270);
+  --popover-foreground: oklch(0.985 0.004 250);
+  --primary: oklch(0.62 0.24 267.6);
   --primary-foreground: oklch(0.99 0.002 250);
-  --primary-glow: oklch(0.72 0.15 260);
-  --secondary: oklch(0.279 0.041 260.031);
-  --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
-  --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.664 0.205 20.5);
+  --primary-glow: oklch(0.72 0.16 250);
+  --navy: oklch(0.26 0.12 270.1);
+  --navy-foreground: oklch(0.99 0.002 250);
+  --violet: oklch(0.6 0.25 288);
+  --violet-foreground: oklch(0.99 0.002 290);
+  --mint: oklch(0.907 0.143 173.4);
+  --mint-foreground: oklch(0.24 0.07 190);
+  --secondary: oklch(0.29 0.085 270);
+  --secondary-foreground: oklch(0.985 0.004 250);
+  --muted: oklch(0.29 0.085 270);
+  --muted-foreground: oklch(0.75 0.05 262);
+  --accent: oklch(0.66 0.21 9.6);
   --accent-foreground: oklch(0.99 0.002 20);
-  --destructive: oklch(0.704 0.191 22.216);
-  --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.62 0.19 262);
-  --need: oklch(0.664 0.205 20.5);
+  --destructive: oklch(0.64 0.22 27);
+  --destructive-foreground: oklch(0.99 0.002 20);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.62 0.24 267.6);
+  --need: oklch(0.66 0.21 9.6);
   --need-foreground: oklch(0.99 0.002 20);
-  --have: oklch(0.65 0.14 155);
-  --have-foreground: oklch(0.15 0.02 155);
-  --dupe: oklch(0.78 0.15 78);
-  --dupe-foreground: oklch(0.2 0.05 78);
+  --have: oklch(0.724 0.208 148.3);
+  --have-foreground: oklch(0.2 0.06 150);
+  --dupe: oklch(0.868 0.22 125.6);
+  --dupe-foreground: oklch(0.24 0.09 128);
   --shadow-card: 0 1px 2px oklch(0 0 0 / 40%), 0 8px 24px -16px oklch(0 0 0 / 60%);
-  --shadow-lift: 0 12px 32px -12px oklch(0.62 0.19 262 / 40%);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
-  --sidebar-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
-  --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
+  --shadow-lift: 0 12px 32px -12px oklch(0.62 0.24 267.6 / 45%);
+  --chart-1: oklch(0.62 0.24 267.6);
+  --chart-2: oklch(0.66 0.21 9.6);
+  --chart-3: oklch(0.724 0.208 148.3);
+  --chart-4: oklch(0.868 0.22 125.6);
+  --chart-5: oklch(0.6 0.25 288);
+  --sidebar: oklch(0.225 0.07 270);
+  --sidebar-foreground: oklch(0.985 0.004 250);
+  --sidebar-primary: oklch(0.62 0.24 267.6);
+  --sidebar-primary-foreground: oklch(0.99 0.002 250);
+  --sidebar-accent: oklch(0.29 0.085 270);
+  --sidebar-accent-foreground: oklch(0.985 0.004 250);
+
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
@@ -193,4 +222,27 @@
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+@utility text-gradient-match {
+  background: linear-gradient(100deg, var(--accent), var(--violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Navy-to-blue tournament field used behind the landing hero. */
+@utility hero-field {
+  background:
+    radial-gradient(60% 70% at 50% 0%, oklch(0.907 0.143 173.4 / 20%), transparent 70%),
+    radial-gradient(70% 90% at 85% 15%, oklch(0.477 0.276 286.6 / 45%), transparent 70%),
+    linear-gradient(165deg, oklch(0.321 0.148 270.1), oklch(0.24 0.14 268));
+  color: oklch(0.99 0.002 250);
+}
+
+/* Mint + lime burst behind celebratory numbers (match reveal, album complete). */
+@utility celebrate-burst {
+  background:
+    radial-gradient(55% 75% at 50% 25%, oklch(0.907 0.143 173.4 / 45%), transparent 70%),
+    radial-gradient(45% 65% at 70% 80%, oklch(0.868 0.22 125.6 / 35%), transparent 70%);
 }

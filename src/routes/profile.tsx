@@ -4,7 +4,9 @@ import { BadgeCheck, Flame, Star, Trophy } from "lucide-react";
 import { AppShell } from "@/components/app/AppShell";
 import { ProgressMeter } from "@/components/app/ProgressMeter";
 import { StatCard } from "@/components/app/StatCard";
+import { levelClass } from "@/lib/levels";
 import { cn } from "@/lib/utils";
+
 import { me, useStore } from "@/mocks/store";
 
 export const Route = createFileRoute("/profile")({
@@ -65,8 +67,10 @@ function Profile() {
         </div>
         <div className="mt-4 rounded-2xl bg-secondary p-3">
           <p className="flex items-center justify-between text-xs font-bold text-secondary-foreground">
-            <span className="inline-flex items-center gap-1.5">
-              <Trophy className="size-3.5 text-primary" aria-hidden />
+            <span
+              className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 ${levelClass(me.level)}`}
+            >
+              <Trophy className="size-3.5" aria-hidden />
               {me.level}
             </span>
             <span>{stats.percent.toFixed(0)}% complete</span>
