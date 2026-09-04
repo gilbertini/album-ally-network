@@ -223,3 +223,26 @@
     display: none;
   }
 }
+
+@utility text-gradient-match {
+  background: linear-gradient(100deg, var(--accent), var(--violet));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Navy-to-blue tournament field used behind the landing hero. */
+@utility hero-field {
+  background:
+    radial-gradient(60% 70% at 50% 0%, oklch(from var(--mint) l c h / 22%), transparent 70%),
+    radial-gradient(70% 90% at 85% 20%, oklch(from var(--violet) l c h / 35%), transparent 70%),
+    linear-gradient(165deg, var(--navy), oklch(from var(--primary) 0.35 c h));
+  color: var(--navy-foreground);
+}
+
+/* Mint + lime burst behind celebratory numbers (match reveal, album complete). */
+@utility celebrate-burst {
+  background:
+    radial-gradient(55% 75% at 50% 25%, oklch(from var(--mint) l c h / 45%), transparent 70%),
+    radial-gradient(45% 65% at 70% 80%, oklch(from var(--dupe) l c h / 35%), transparent 70%);
+}
