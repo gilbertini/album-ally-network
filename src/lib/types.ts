@@ -1,4 +1,4 @@
-export type StickerCategory = "player" | "emblem" | "team_photo" | "world_cup";
+export type StickerCategory = "player" | "emblem" | "team_photo" | "world_cup" | "coca_cola";
 
 export interface Sticker {
   id: string;
@@ -9,6 +9,7 @@ export interface Sticker {
   flag: string;
   category: StickerCategory;
   album: string;
+  editionId: string;
   number: number;
 }
 
