@@ -4,9 +4,10 @@ import type { Sticker } from "@/lib/types";
 
 export const ALBUM_NAME = "Panini FIFA World Cup 2026";
 export const EXPECTED_BASE_COUNT = 980;
+export const EXPECTED_TOTAL_COUNT = 992;
 
 /**
- * The authoritative 980-sticker checklist is in src/data/checklist-2026.ts, so
+ * The authoritative 992-sticker USA & Canada checklist is in src/data/checklist-2026.ts, so
  * the hard count validation runs. Set to false only while staging a partial
  * checklist for a new album.
  */
@@ -14,7 +15,7 @@ export const CHECKLIST_IS_COMPLETE = true;
 
 export const album = parseChecklist(WORLD_CUP_2026_CHECKLIST_MD, {
   album: ALBUM_NAME,
-  ...(CHECKLIST_IS_COMPLETE ? { expectedBaseCount: EXPECTED_BASE_COUNT } : {}),
+  ...(CHECKLIST_IS_COMPLETE ? { expectedBaseCount: EXPECTED_TOTAL_COUNT } : {}),
 });
 
 export const stickers: Sticker[] = album.stickers;
