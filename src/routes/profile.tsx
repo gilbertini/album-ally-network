@@ -4,7 +4,9 @@ import { BadgeCheck, Flame, Star, Trophy } from "lucide-react";
 import { AppShell } from "@/components/app/AppShell";
 import { ProgressMeter } from "@/components/app/ProgressMeter";
 import { StatCard } from "@/components/app/StatCard";
+import { levelClass } from "@/lib/levels";
 import { cn } from "@/lib/utils";
+
 import { me, useStore } from "@/mocks/store";
 
 export const Route = createFileRoute("/profile")({
