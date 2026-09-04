@@ -32,6 +32,7 @@ const CODE_IN_HEADING = /\(([A-Z]{2,5})\)/;
 const IGNORED_LINE = /^(?:>|-{3,}$|\*{3,}$|_{3,}$)/;
 
 function categorize(name: string, section: string): StickerCategory {
+  if (/coca-cola|coca cola/i.test(section)) return "coca_cola";
   const n = name.toLowerCase();
   // Section wins for non-team sections: "Official Emblem" inside a
   // tournament/publisher section is a world-cup sticker, not a team emblem.
@@ -107,6 +108,7 @@ export function parseChecklist(
       flag: flag || flagForCode(countryCode),
       category: categorize(name, section),
       album: options.album,
+      editionId: code.startsWith("CC") ? "north-america-coca-cola" : "international-core",
       number: stickers.length + 1,
     });
   }
