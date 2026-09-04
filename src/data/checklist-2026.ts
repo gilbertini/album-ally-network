@@ -1,15 +1,15 @@
 /**
- * Authoritative Panini FIFA World Cup 2026 base checklist (980 stickers).
+ * Authoritative Panini FIFA World Cup 2026 album checklist (992 stickers for the USA & Canada Coca-Cola edition).
  *
  * Swap this string for another album's Markdown checklist and the whole app
  * follows via parseChecklist() in src/lib/checklist/parse.ts.
  */
 export const WORLD_CUP_2026_CHECKLIST_MD = `
-# Panini FIFA World Cup 2026 — Complete Base Album Checklist
+# Panini FIFA World Cup 2026 — Complete Album Checklist — USA & Canada Coca-Cola Edition
 
-**Total base stickers: 980**
+**Total stickers: 992**
 
-> This checklist covers the standard base album: sticker 00, FWC1–FWC19, and 20 stickers for each of the 48 teams. It excludes shiny s variants and other regional/promotional, Extra, Coca-Cola, and Update stickers.
+> This checklist contains the 980-sticker international core plus the 12-sticker USA & Canada Coca-Cola set. It excludes parallels, unnumbered Extra stickers, and the separate Update Set.
 
 ## We Are Panini
 
@@ -1141,7 +1141,22 @@ export const WORLD_CUP_2026_CHECKLIST_MD = `
 - [ ] **PAN19** — Jose Luiz Rodriguez
 - [ ] **PAN20** — Alberto Quintero
 
+## Coca-Cola — USA & Canada (CC)
+
+- [ ] **CC1** — Lamine Yamal
+- [ ] **CC2** — Joshua Kimmich
+- [ ] **CC3** — Harry Kane
+- [ ] **CC4** — Santiago Giménez
+- [ ] **CC5** — Antonee Robinson
+- [ ] **CC6** — Jefferson Lerma
+- [ ] **CC7** — Edson Álvarez
+- [ ] **CC8** — Virgil van Dijk
+- [ ] **CC9** — Alphonso Davies
+- [ ] **CC10** — Weston McKennie
+- [ ] **CC11** — Lautaro Martínez
+- [ ] **CC12** — Gabriel Magalhães
+
 ---
 
-**Checklist count:** 980 base stickers.
+**Checklist count:** 992 stickers (980 international core + 12 USA & Canada Coca-Cola).
 `;
