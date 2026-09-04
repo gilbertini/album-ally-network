@@ -232,10 +232,12 @@ function Onboarding() {
 
         {step === 3 ? (
           <section className="text-center">
-            <p className="text-5xl">🎯</p>
-            <h1 className="mt-3 text-3xl font-extrabold text-foreground animate-in fade-in zoom-in-95 duration-500">
-              {matches.length} Trade Matches Found
-            </h1>
+            <div className="celebrate-burst relative -mx-5 rounded-[2.5rem] px-5 py-8">
+              <p className="text-5xl">🎯</p>
+              <h1 className="mt-3 text-3xl font-extrabold text-foreground animate-in fade-in zoom-in-95 duration-500">
+                {matches.length} Trade Matches Found
+              </h1>
+            </div>
             <p className="mt-2 text-sm text-muted-foreground">
               {helpers} collectors have stickers you need.
               <br />
@@ -250,7 +252,7 @@ function Onboarding() {
                   <p className="mt-1 text-lg font-extrabold text-foreground">
                     {mutual[0].collector.displayName} {mutual[0].collector.flag}
                   </p>
-                  <p className="text-2xl font-extrabold text-gradient-primary">
+                  <p className="text-2xl font-extrabold text-gradient-match">
                     {mutual[0].score}% Trade Match
                   </p>
                   <p className="mt-2 text-xs text-muted-foreground">

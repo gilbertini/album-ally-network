@@ -15,7 +15,7 @@ export function MatchCard({ match, limit = 3 }: { match: MatchResult; limit?: nu
       <div className="flex items-start justify-between gap-3 border-b border-border p-4">
         <CollectorBadge collector={match.collector} />
         <div className="shrink-0 text-right">
-          <p className="text-xl font-extrabold text-gradient-primary">{match.score}%</p>
+          <p className="text-xl font-extrabold text-gradient-match">{match.score}%</p>
           <p className="text-[10px] font-semibold uppercase tracking-wide text-muted-foreground">
             Trade match
           </p>
