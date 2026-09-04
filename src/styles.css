@@ -67,6 +67,13 @@
   --color-have-foreground: var(--have-foreground);
   --color-dupe: var(--dupe);
   --color-dupe-foreground: var(--dupe-foreground);
+  --color-navy: var(--navy);
+  --color-navy-foreground: var(--navy-foreground);
+  --color-violet: var(--violet);
+  --color-violet-foreground: var(--violet-foreground);
+  --color-mint: var(--mint);
+  --color-mint-foreground: var(--mint-foreground);
+
   --shadow-card: var(--shadow-card);
   --shadow-lift: var(--shadow-lift);
 }
