@@ -36,7 +36,7 @@ export function validate(rows) {
   const core = rows.filter((row) => row.editionId === "international-core");
   const cocaCola = rows.filter((row) => row.editionId === "north-america-coca-cola");
   const teams = new Map();
-  for (const row of core.filter((item) => /^[A-Z]{3}\d+$/.test(item.code))) {
+  for (const row of core.filter((item) => /^[A-Z]{3}\d+$/.test(item.code) && !item.code.startsWith("FWC"))) {
     teams.set(row.section, (teams.get(row.section) ?? 0) + 1);
   }
   if (rows.length !== 992) errors.push(`Expected 992 records, found ${rows.length}.`);
