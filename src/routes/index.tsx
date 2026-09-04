@@ -56,30 +56,31 @@ function Landing() {
         </Link>
       </header>
 
-      <section className="mx-auto max-w-5xl px-5 pb-14 pt-6 text-center">
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-secondary px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-secondary-foreground">
-          <Sparkles className="size-3.5 text-primary" aria-hidden />
+      <section className="hero-field relative overflow-hidden rounded-b-[2.5rem] px-5 pb-14 pt-6 text-center">
+        <div className="relative mx-auto max-w-5xl">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-mint ring-1 ring-inset ring-white/15">
+          <Sparkles className="size-3.5 text-mint" aria-hidden />
           {ALBUM_NAME}
         </span>
-        <h1 className="mx-auto mt-5 max-w-2xl text-4xl font-extrabold leading-[1.05] text-foreground sm:text-6xl">
-          Complete the album <span className="text-gradient-primary">together.</span>
+        <h1 className="mx-auto mt-5 max-w-2xl text-4xl font-extrabold leading-[1.05] sm:text-6xl">
+          Complete the album <span className="text-mint">together.</span>
         </h1>
-        <p className="mx-auto mt-4 max-w-md text-base font-semibold text-foreground/80">
+        <p className="mx-auto mt-4 max-w-md text-base font-semibold">
           No buying. No selling. Just trading.
         </p>
-        <p className="mx-auto mt-1 max-w-md text-sm text-muted-foreground">
+        <p className="mx-auto mt-1 max-w-md text-sm opacity-80">
           Complete your album. Trade your duplicates.
         </p>
         <div className="mt-7 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
           <Link
             to="/onboarding"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 text-sm font-bold text-primary-foreground shadow-[var(--shadow-lift)] transition-transform hover:scale-[1.02] sm:w-auto"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-accent px-6 py-3.5 text-sm font-bold text-accent-foreground shadow-[var(--shadow-lift)] transition-transform hover:scale-[1.02] sm:w-auto"
           >
             Join for $5 <ArrowRight className="size-4" aria-hidden />
           </Link>
           <a
             href="#how-it-works"
-            className="inline-flex w-full items-center justify-center rounded-full border border-border bg-card px-6 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-muted sm:w-auto"
+            className="inline-flex w-full items-center justify-center rounded-full border border-white/25 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/20 sm:w-auto"
           >
             See How It Works
           </a>
@@ -93,12 +94,13 @@ function Landing() {
           ].map((s) => (
             <div
               key={s.v}
-              className="rounded-2xl border border-border bg-card p-4 shadow-[var(--shadow-card)]"
+              className="rounded-2xl border border-white/15 bg-white/10 p-4"
             >
-              <p className="text-2xl font-extrabold text-foreground">{s.k}</p>
-              <p className="text-[11px] text-muted-foreground">{s.v}</p>
+              <p className="text-2xl font-extrabold">{s.k}</p>
+              <p className="text-[11px] opacity-75">{s.v}</p>
             </div>
           ))}
+        </div>
         </div>
       </section>
 
